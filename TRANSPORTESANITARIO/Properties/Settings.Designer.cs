@@ -22,5 +22,27 @@ namespace TRANSPORTESANITARIO.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;password=mestre123456;database=transportesanitariob" +
+            "d")]
+        public string transportesanitariobdConnectionString {
+            get {
+                return ((string)(this["transportesanitariobdConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;database=transportesanitariobd;Persist Security Inf" +
+            "o=True;password=mestre123456")]
+        public string transportesanitariobdConnectionString1 {
+            get {
+                return ((string)(this["transportesanitariobdConnectionString1"]));
+            }
+        }
     }
 }
