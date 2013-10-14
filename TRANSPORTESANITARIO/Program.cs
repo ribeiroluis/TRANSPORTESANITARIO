@@ -15,8 +15,7 @@ namespace TRANSPORTESANITARIO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new frmFichadeAtendimento(5995));
-           // Application.Run(new frmGerenciaEmpenhos());
+            Application.Run(new frmFichadeAtendimento());
         }
     }
 }

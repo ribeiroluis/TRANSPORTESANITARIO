@@ -45,28 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDados\AmbulanciaEmpenhoDataSet.cs">
-      <DependentUpon>AmbulanciaEmpenhoDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="BancoDados\AmbulanciaEmpenhoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AmbulanciaEmpenhoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BancoDados\AtendimentoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AtendimentoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BancoDados\EmpenhosDataSet.cs">
-      <DependentUpon>EmpenhosDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="BancoDados\EmpenhosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmpenhosDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BancoDados\EstabelecimentoSaudeDataSet.cs">
       <DependentUpon>EstabelecimentoSaudeDataSet.xsd</DependentUpon>
@@ -77,46 +59,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EstabelecimentoSaudeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BancoDados\FuncionariosDataSet.cs">
-      <DependentUpon>FuncionariosDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="BancoDados\FuncionariosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FuncionariosDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BancoDados\PacientesDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PacientesDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controles\Ambulancia.cs" />
-    <Compile Include="Controles\Cargo.cs" />
-    <Compile Include="Controles\FuncionarioAmbulancia.cs" />
+    <Compile Include="Controles\AmbulanciaEmpenho.cs" />
     <Compile Include="Controles\Atendimento.cs" />
     <Compile Include="Controles\CEP.cs" />
     <Compile Include="Controles\Empenho.cs" />
     <Compile Include="Controles\EstabelecimentoSaude.cs" />
     <Compile Include="Controles\Funcionario.cs" />
     <Compile Include="Controles\Paciente.cs" />
-    <Compile Include="Interface\frmAtualizaAmbulancias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\frmAtualizaAmbulancias.Designer.cs">
-      <DependentUpon>frmAtualizaAmbulancias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\frmFichadeAtendimento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\frmFichadeAtendimento.Designer.cs">
       <DependentUpon>frmFichadeAtendimento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\frmGerenciaEmpenhos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\frmGerenciaEmpenhos.Designer.cs">
-      <DependentUpon>frmGerenciaEmpenhos.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\frmIncluirEstabelecimento.cs">
       <SubType>Form</SubType>
@@ -136,24 +91,6 @@
     <Compile Include="Interface\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\frmMotivoBaixa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\frmMotivoBaixa.Designer.cs">
-      <DependentUpon>frmMotivoBaixa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\frmPacientesCadstrados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\frmPacientesCadstrados.Designer.cs">
-      <DependentUpon>frmPacientesCadstrados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\frmPesquisarEmpenhos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\frmPesquisarEmpenhos.Designer.cs">
-      <DependentUpon>frmPesquisarEmpenhos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\TelaSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,14 +99,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Interface\frmAtualizaAmbulancias.resx">
-      <DependentUpon>frmAtualizaAmbulancias.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interface\frmFichadeAtendimento.resx">
       <DependentUpon>frmFichadeAtendimento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\frmGerenciaEmpenhos.resx">
-      <DependentUpon>frmGerenciaEmpenhos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\frmIncluirEstabelecimento.resx">
       <DependentUpon>frmIncluirEstabelecimento.cs</DependentUpon>
@@ -179,15 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\frmMotivoBaixa.resx">
-      <DependentUpon>frmMotivoBaixa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\frmPacientesCadstrados.resx">
-      <DependentUpon>frmPacientesCadstrados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\frmPesquisarEmpenhos.resx">
-      <DependentUpon>frmPesquisarEmpenhos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\TelaSplash.resx">
       <DependentUpon>TelaSplash.cs</DependentUpon>
@@ -203,17 +125,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="BancoDados\AmbulanciaEmpenhoDataSet.xsc">
-      <DependentUpon>AmbulanciaEmpenhoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\AmbulanciaEmpenhoDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AmbulanciaEmpenhoDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="BancoDados\AmbulanciaEmpenhoDataSet.xss">
-      <DependentUpon>AmbulanciaEmpenhoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="BancoDados\AtendimentoDataSet.xsc">
       <DependentUpon>AtendimentoDataSet.xsd</DependentUpon>
     </None>
@@ -224,17 +135,6 @@
     </None>
     <None Include="BancoDados\AtendimentoDataSet.xss">
       <DependentUpon>AtendimentoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\EmpenhosDataSet.xsc">
-      <DependentUpon>EmpenhosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\EmpenhosDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EmpenhosDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="BancoDados\EmpenhosDataSet.xss">
-      <DependentUpon>EmpenhosDataSet.xsd</DependentUpon>
     </None>
     <None Include="BancoDados\EstabelecimentoSaudeDataSet.xsc">
       <DependentUpon>EstabelecimentoSaudeDataSet.xsd</DependentUpon>
@@ -247,28 +147,6 @@
     <None Include="BancoDados\EstabelecimentoSaudeDataSet.xss">
       <DependentUpon>EstabelecimentoSaudeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BancoDados\FuncionariosDataSet.xsc">
-      <DependentUpon>FuncionariosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\FuncionariosDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FuncionariosDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="BancoDados\FuncionariosDataSet.xss">
-      <DependentUpon>FuncionariosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\PacientesDataSet.xsc">
-      <DependentUpon>PacientesDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDados\PacientesDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PacientesDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="BancoDados\PacientesDataSet.xss">
-      <DependentUpon>PacientesDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -279,17 +157,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirmar.gif" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\brasaobetim.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\suslogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1356042729_11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

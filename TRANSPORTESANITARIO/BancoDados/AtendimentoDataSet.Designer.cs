@@ -26,8 +26,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
         
         private tb_atendimentoDataTable tabletb_atendimento;
         
-        private ViewEmpenhosDiaDataTable tableViewEmpenhosDia;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -59,9 +57,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 if ((ds.Tables["tb_atendimento"] != null)) {
                     base.Tables.Add(new tb_atendimentoDataTable(ds.Tables["tb_atendimento"]));
                 }
-                if ((ds.Tables["ViewEmpenhosDia"] != null)) {
-                    base.Tables.Add(new ViewEmpenhosDiaDataTable(ds.Tables["ViewEmpenhosDia"]));
-                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -87,16 +82,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
         public tb_atendimentoDataTable tb_atendimento {
             get {
                 return this.tabletb_atendimento;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ViewEmpenhosDiaDataTable ViewEmpenhosDia {
-            get {
-                return this.tableViewEmpenhosDia;
             }
         }
         
@@ -170,9 +155,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 if ((ds.Tables["tb_atendimento"] != null)) {
                     base.Tables.Add(new tb_atendimentoDataTable(ds.Tables["tb_atendimento"]));
                 }
-                if ((ds.Tables["ViewEmpenhosDia"] != null)) {
-                    base.Tables.Add(new ViewEmpenhosDiaDataTable(ds.Tables["ViewEmpenhosDia"]));
-                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -212,12 +194,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
                     this.tabletb_atendimento.InitVars();
                 }
             }
-            this.tableViewEmpenhosDia = ((ViewEmpenhosDiaDataTable)(base.Tables["ViewEmpenhosDia"]));
-            if ((initTable == true)) {
-                if ((this.tableViewEmpenhosDia != null)) {
-                    this.tableViewEmpenhosDia.InitVars();
-                }
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -230,19 +206,11 @@ namespace TRANSPORTESANITARIO.BancoDados {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletb_atendimento = new tb_atendimentoDataTable();
             base.Tables.Add(this.tabletb_atendimento);
-            this.tableViewEmpenhosDia = new ViewEmpenhosDiaDataTable();
-            base.Tables.Add(this.tableViewEmpenhosDia);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetb_atendimento() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeViewEmpenhosDia() {
             return false;
         }
         
@@ -304,9 +272,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tb_atendimentoRowChangeEventHandler(object sender, tb_atendimentoRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ViewEmpenhosDiaRowChangeEventHandler(object sender, ViewEmpenhosDiaRowChangeEvent e);
-        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -346,11 +311,13 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             private global::System.Data.DataColumn columnTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL;
             
+            private global::System.Data.DataColumn columnTB_EMPENHO_idEMPENHO;
+            
             private global::System.Data.DataColumn columnSTATUS_ATENDIMENTO;
             
-            private global::System.Data.DataColumn columnSOLICITANTE_ATENDIMENTO;
+            private global::System.Data.DataColumn columnTELEFONEPACIENTE;
             
-            private global::System.Data.DataColumn columnOBSERVACAO_ATENDIMENTO;
+            private global::System.Data.DataColumn columnSOLICITANTE_ATENDIMENTO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -515,6 +482,14 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TB_EMPENHO_idEMPENHOColumn {
+                get {
+                    return this.columnTB_EMPENHO_idEMPENHO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn STATUS_ATENDIMENTOColumn {
                 get {
                     return this.columnSTATUS_ATENDIMENTO;
@@ -523,17 +498,17 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SOLICITANTE_ATENDIMENTOColumn {
+            public global::System.Data.DataColumn TELEFONEPACIENTEColumn {
                 get {
-                    return this.columnSOLICITANTE_ATENDIMENTO;
+                    return this.columnTELEFONEPACIENTE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OBSERVACAO_ATENDIMENTOColumn {
+            public global::System.Data.DataColumn SOLICITANTE_ATENDIMENTOColumn {
                 get {
-                    return this.columnOBSERVACAO_ATENDIMENTO;
+                    return this.columnSOLICITANTE_ATENDIMENTO;
                 }
             }
             
@@ -576,9 +551,9 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tb_atendimentoRow Addtb_atendimentoRow(
                         int idATENDIMENTO, 
-                        System.DateTime HORARIO_ATENDIMENTO, 
+                        System.TimeSpan HORARIO_ATENDIMENTO, 
                         System.DateTime DATA_ATENDIMENTO, 
-                        System.DateTime HORACONSULTA_ATENDIMENTO, 
+                        System.TimeSpan HORACONSULTA_ATENDIMENTO, 
                         System.DateTime DATACONSULTA_ATENDIMENTO, 
                         int ESTABELECIMENTOorigem_ATENDIMENTO, 
                         int ESTABELECIMENTOdestino_ATENDIMENTO, 
@@ -591,9 +566,10 @@ namespace TRANSPORTESANITARIO.BancoDados {
                         int TEMPERATURA_ATENDIMENTO, 
                         int SATURACAO_ATENDIMENTO, 
                         int TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                        int STATUS_ATENDIMENTO, 
-                        string SOLICITANTE_ATENDIMENTO, 
-                        string OBSERVACAO_ATENDIMENTO) {
+                        int TB_EMPENHO_idEMPENHO, 
+                        string STATUS_ATENDIMENTO, 
+                        string TELEFONEPACIENTE, 
+                        string SOLICITANTE_ATENDIMENTO) {
                 tb_atendimentoRow rowtb_atendimentoRow = ((tb_atendimentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idATENDIMENTO,
@@ -612,9 +588,10 @@ namespace TRANSPORTESANITARIO.BancoDados {
                         TEMPERATURA_ATENDIMENTO,
                         SATURACAO_ATENDIMENTO,
                         TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL,
+                        TB_EMPENHO_idEMPENHO,
                         STATUS_ATENDIMENTO,
-                        SOLICITANTE_ATENDIMENTO,
-                        OBSERVACAO_ATENDIMENTO};
+                        TELEFONEPACIENTE,
+                        SOLICITANTE_ATENDIMENTO};
                 rowtb_atendimentoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtb_atendimentoRow);
                 return rowtb_atendimentoRow;
@@ -660,9 +637,10 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 this.columnTEMPERATURA_ATENDIMENTO = base.Columns["TEMPERATURA_ATENDIMENTO"];
                 this.columnSATURACAO_ATENDIMENTO = base.Columns["SATURACAO_ATENDIMENTO"];
                 this.columnTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL = base.Columns["TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL"];
+                this.columnTB_EMPENHO_idEMPENHO = base.Columns["TB_EMPENHO_idEMPENHO"];
                 this.columnSTATUS_ATENDIMENTO = base.Columns["STATUS_ATENDIMENTO"];
+                this.columnTELEFONEPACIENTE = base.Columns["TELEFONEPACIENTE"];
                 this.columnSOLICITANTE_ATENDIMENTO = base.Columns["SOLICITANTE_ATENDIMENTO"];
-                this.columnOBSERVACAO_ATENDIMENTO = base.Columns["OBSERVACAO_ATENDIMENTO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -670,11 +648,11 @@ namespace TRANSPORTESANITARIO.BancoDados {
             private void InitClass() {
                 this.columnidATENDIMENTO = new global::System.Data.DataColumn("idATENDIMENTO", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidATENDIMENTO);
-                this.columnHORARIO_ATENDIMENTO = new global::System.Data.DataColumn("HORARIO_ATENDIMENTO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnHORARIO_ATENDIMENTO = new global::System.Data.DataColumn("HORARIO_ATENDIMENTO", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHORARIO_ATENDIMENTO);
                 this.columnDATA_ATENDIMENTO = new global::System.Data.DataColumn("DATA_ATENDIMENTO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATA_ATENDIMENTO);
-                this.columnHORACONSULTA_ATENDIMENTO = new global::System.Data.DataColumn("HORACONSULTA_ATENDIMENTO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnHORACONSULTA_ATENDIMENTO = new global::System.Data.DataColumn("HORACONSULTA_ATENDIMENTO", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHORACONSULTA_ATENDIMENTO);
                 this.columnDATACONSULTA_ATENDIMENTO = new global::System.Data.DataColumn("DATACONSULTA_ATENDIMENTO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATACONSULTA_ATENDIMENTO);
@@ -700,18 +678,27 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 base.Columns.Add(this.columnSATURACAO_ATENDIMENTO);
                 this.columnTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL = new global::System.Data.DataColumn("TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL);
-                this.columnSTATUS_ATENDIMENTO = new global::System.Data.DataColumn("STATUS_ATENDIMENTO", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnTB_EMPENHO_idEMPENHO = new global::System.Data.DataColumn("TB_EMPENHO_idEMPENHO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTB_EMPENHO_idEMPENHO);
+                this.columnSTATUS_ATENDIMENTO = new global::System.Data.DataColumn("STATUS_ATENDIMENTO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSTATUS_ATENDIMENTO);
+                this.columnTELEFONEPACIENTE = new global::System.Data.DataColumn("TELEFONEPACIENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTELEFONEPACIENTE);
                 this.columnSOLICITANTE_ATENDIMENTO = new global::System.Data.DataColumn("SOLICITANTE_ATENDIMENTO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSOLICITANTE_ATENDIMENTO);
-                this.columnOBSERVACAO_ATENDIMENTO = new global::System.Data.DataColumn("OBSERVACAO_ATENDIMENTO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOBSERVACAO_ATENDIMENTO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidATENDIMENTO}, true));
                 this.columnidATENDIMENTO.AllowDBNull = false;
                 this.columnidATENDIMENTO.Unique = true;
+                this.columnESTABELECIMENTOorigem_ATENDIMENTO.AllowDBNull = false;
+                this.columnESTABELECIMENTOdestino_ATENDIMENTO.AllowDBNull = false;
+                this.columnPACIENTEorigem_ATENDIMENTO.AllowDBNull = false;
+                this.columnPACIENTEdestino_ATENDIMENTO.AllowDBNull = false;
+                this.columnTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.AllowDBNull = false;
+                this.columnTB_EMPENHO_idEMPENHO.AllowDBNull = false;
+                this.columnSTATUS_ATENDIMENTO.MaxLength = 45;
+                this.columnTELEFONEPACIENTE.MaxLength = 11;
                 this.columnSOLICITANTE_ATENDIMENTO.MaxLength = 45;
-                this.columnOBSERVACAO_ATENDIMENTO.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -839,533 +826,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ViewEmpenhosDiaDataTable : global::System.Data.TypedTableBase<ViewEmpenhosDiaRow> {
-            
-            private global::System.Data.DataColumn columnDATA;
-            
-            private global::System.Data.DataColumn columnHORA;
-            
-            private global::System.Data.DataColumn columnidOrigem;
-            
-            private global::System.Data.DataColumn columnNomeEstabelecimentoOrigem;
-            
-            private global::System.Data.DataColumn columnidDestino;
-            
-            private global::System.Data.DataColumn columnNomeEstabelecimentoDestino;
-            
-            private global::System.Data.DataColumn columnidPacienteOrigem;
-            
-            private global::System.Data.DataColumn columnNomePacienteOrigem;
-            
-            private global::System.Data.DataColumn columnidPacienteDestino;
-            
-            private global::System.Data.DataColumn columnNomePacienteDestino;
-            
-            private global::System.Data.DataColumn columnPADiastolica;
-            
-            private global::System.Data.DataColumn columnPASistolica;
-            
-            private global::System.Data.DataColumn columnFrequenciaCardiaca;
-            
-            private global::System.Data.DataColumn columnFrequenciaRespiratoria;
-            
-            private global::System.Data.DataColumn columnTemperatura;
-            
-            private global::System.Data.DataColumn columnSaturacao;
-            
-            private global::System.Data.DataColumn columnStatusAtendimento;
-            
-            private global::System.Data.DataColumn columnObservacao;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaDataTable() {
-                this.TableName = "ViewEmpenhosDia";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ViewEmpenhosDiaDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ViewEmpenhosDiaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DATAColumn {
-                get {
-                    return this.columnDATA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HORAColumn {
-                get {
-                    return this.columnHORA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idOrigemColumn {
-                get {
-                    return this.columnidOrigem;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NomeEstabelecimentoOrigemColumn {
-                get {
-                    return this.columnNomeEstabelecimentoOrigem;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idDestinoColumn {
-                get {
-                    return this.columnidDestino;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NomeEstabelecimentoDestinoColumn {
-                get {
-                    return this.columnNomeEstabelecimentoDestino;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idPacienteOrigemColumn {
-                get {
-                    return this.columnidPacienteOrigem;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NomePacienteOrigemColumn {
-                get {
-                    return this.columnNomePacienteOrigem;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idPacienteDestinoColumn {
-                get {
-                    return this.columnidPacienteDestino;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NomePacienteDestinoColumn {
-                get {
-                    return this.columnNomePacienteDestino;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PADiastolicaColumn {
-                get {
-                    return this.columnPADiastolica;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PASistolicaColumn {
-                get {
-                    return this.columnPASistolica;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FrequenciaCardiacaColumn {
-                get {
-                    return this.columnFrequenciaCardiaca;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FrequenciaRespiratoriaColumn {
-                get {
-                    return this.columnFrequenciaRespiratoria;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TemperaturaColumn {
-                get {
-                    return this.columnTemperatura;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SaturacaoColumn {
-                get {
-                    return this.columnSaturacao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn StatusAtendimentoColumn {
-                get {
-                    return this.columnStatusAtendimento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ObservacaoColumn {
-                get {
-                    return this.columnObservacao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRow this[int index] {
-                get {
-                    return ((ViewEmpenhosDiaRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ViewEmpenhosDiaRowChangeEventHandler ViewEmpenhosDiaRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ViewEmpenhosDiaRowChangeEventHandler ViewEmpenhosDiaRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ViewEmpenhosDiaRowChangeEventHandler ViewEmpenhosDiaRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ViewEmpenhosDiaRowChangeEventHandler ViewEmpenhosDiaRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddViewEmpenhosDiaRow(ViewEmpenhosDiaRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRow AddViewEmpenhosDiaRow(
-                        System.DateTime DATA, 
-                        System.DateTime HORA, 
-                        int idOrigem, 
-                        string NomeEstabelecimentoOrigem, 
-                        int idDestino, 
-                        string NomeEstabelecimentoDestino, 
-                        int idPacienteOrigem, 
-                        string NomePacienteOrigem, 
-                        int idPacienteDestino, 
-                        string NomePacienteDestino, 
-                        int PADiastolica, 
-                        int PASistolica, 
-                        int FrequenciaCardiaca, 
-                        int FrequenciaRespiratoria, 
-                        int Temperatura, 
-                        int Saturacao, 
-                        int StatusAtendimento, 
-                        string Observacao) {
-                ViewEmpenhosDiaRow rowViewEmpenhosDiaRow = ((ViewEmpenhosDiaRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        DATA,
-                        HORA,
-                        idOrigem,
-                        NomeEstabelecimentoOrigem,
-                        idDestino,
-                        NomeEstabelecimentoDestino,
-                        idPacienteOrigem,
-                        NomePacienteOrigem,
-                        idPacienteDestino,
-                        NomePacienteDestino,
-                        PADiastolica,
-                        PASistolica,
-                        FrequenciaCardiaca,
-                        FrequenciaRespiratoria,
-                        Temperatura,
-                        Saturacao,
-                        StatusAtendimento,
-                        Observacao};
-                rowViewEmpenhosDiaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowViewEmpenhosDiaRow);
-                return rowViewEmpenhosDiaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRow FindByidOrigemidDestinoidPacienteOrigemidPacienteDestino(int idOrigem, int idDestino, int idPacienteOrigem, int idPacienteDestino) {
-                return ((ViewEmpenhosDiaRow)(this.Rows.Find(new object[] {
-                            idOrigem,
-                            idDestino,
-                            idPacienteOrigem,
-                            idPacienteDestino})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ViewEmpenhosDiaDataTable cln = ((ViewEmpenhosDiaDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ViewEmpenhosDiaDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnDATA = base.Columns["DATA"];
-                this.columnHORA = base.Columns["HORA"];
-                this.columnidOrigem = base.Columns["idOrigem"];
-                this.columnNomeEstabelecimentoOrigem = base.Columns["NomeEstabelecimentoOrigem"];
-                this.columnidDestino = base.Columns["idDestino"];
-                this.columnNomeEstabelecimentoDestino = base.Columns["NomeEstabelecimentoDestino"];
-                this.columnidPacienteOrigem = base.Columns["idPacienteOrigem"];
-                this.columnNomePacienteOrigem = base.Columns["NomePacienteOrigem"];
-                this.columnidPacienteDestino = base.Columns["idPacienteDestino"];
-                this.columnNomePacienteDestino = base.Columns["NomePacienteDestino"];
-                this.columnPADiastolica = base.Columns["PADiastolica"];
-                this.columnPASistolica = base.Columns["PASistolica"];
-                this.columnFrequenciaCardiaca = base.Columns["FrequenciaCardiaca"];
-                this.columnFrequenciaRespiratoria = base.Columns["FrequenciaRespiratoria"];
-                this.columnTemperatura = base.Columns["Temperatura"];
-                this.columnSaturacao = base.Columns["Saturacao"];
-                this.columnStatusAtendimento = base.Columns["StatusAtendimento"];
-                this.columnObservacao = base.Columns["Observacao"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnDATA = new global::System.Data.DataColumn("DATA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA);
-                this.columnHORA = new global::System.Data.DataColumn("HORA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHORA);
-                this.columnidOrigem = new global::System.Data.DataColumn("idOrigem", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidOrigem);
-                this.columnNomeEstabelecimentoOrigem = new global::System.Data.DataColumn("NomeEstabelecimentoOrigem", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNomeEstabelecimentoOrigem);
-                this.columnidDestino = new global::System.Data.DataColumn("idDestino", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidDestino);
-                this.columnNomeEstabelecimentoDestino = new global::System.Data.DataColumn("NomeEstabelecimentoDestino", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNomeEstabelecimentoDestino);
-                this.columnidPacienteOrigem = new global::System.Data.DataColumn("idPacienteOrigem", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidPacienteOrigem);
-                this.columnNomePacienteOrigem = new global::System.Data.DataColumn("NomePacienteOrigem", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNomePacienteOrigem);
-                this.columnidPacienteDestino = new global::System.Data.DataColumn("idPacienteDestino", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidPacienteDestino);
-                this.columnNomePacienteDestino = new global::System.Data.DataColumn("NomePacienteDestino", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNomePacienteDestino);
-                this.columnPADiastolica = new global::System.Data.DataColumn("PADiastolica", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPADiastolica);
-                this.columnPASistolica = new global::System.Data.DataColumn("PASistolica", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPASistolica);
-                this.columnFrequenciaCardiaca = new global::System.Data.DataColumn("FrequenciaCardiaca", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFrequenciaCardiaca);
-                this.columnFrequenciaRespiratoria = new global::System.Data.DataColumn("FrequenciaRespiratoria", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFrequenciaRespiratoria);
-                this.columnTemperatura = new global::System.Data.DataColumn("Temperatura", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTemperatura);
-                this.columnSaturacao = new global::System.Data.DataColumn("Saturacao", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaturacao);
-                this.columnStatusAtendimento = new global::System.Data.DataColumn("StatusAtendimento", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatusAtendimento);
-                this.columnObservacao = new global::System.Data.DataColumn("Observacao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnObservacao);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidOrigem,
-                                this.columnidDestino,
-                                this.columnidPacienteOrigem,
-                                this.columnidPacienteDestino}, true));
-                this.columnidOrigem.AllowDBNull = false;
-                this.columnNomeEstabelecimentoOrigem.MaxLength = 45;
-                this.columnidDestino.AllowDBNull = false;
-                this.columnNomeEstabelecimentoDestino.MaxLength = 45;
-                this.columnidPacienteOrigem.AllowDBNull = false;
-                this.columnNomePacienteOrigem.MaxLength = 100;
-                this.columnidPacienteDestino.AllowDBNull = false;
-                this.columnNomePacienteDestino.MaxLength = 100;
-                this.columnObservacao.MaxLength = 200;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRow NewViewEmpenhosDiaRow() {
-                return ((ViewEmpenhosDiaRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ViewEmpenhosDiaRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ViewEmpenhosDiaRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ViewEmpenhosDiaRowChanged != null)) {
-                    this.ViewEmpenhosDiaRowChanged(this, new ViewEmpenhosDiaRowChangeEvent(((ViewEmpenhosDiaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ViewEmpenhosDiaRowChanging != null)) {
-                    this.ViewEmpenhosDiaRowChanging(this, new ViewEmpenhosDiaRowChangeEvent(((ViewEmpenhosDiaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ViewEmpenhosDiaRowDeleted != null)) {
-                    this.ViewEmpenhosDiaRowDeleted(this, new ViewEmpenhosDiaRowChangeEvent(((ViewEmpenhosDiaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ViewEmpenhosDiaRowDeleting != null)) {
-                    this.ViewEmpenhosDiaRowDeleting(this, new ViewEmpenhosDiaRowChangeEvent(((ViewEmpenhosDiaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveViewEmpenhosDiaRow(ViewEmpenhosDiaRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AtendimentoDataSet ds = new AtendimentoDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ViewEmpenhosDiaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tb_atendimentoRow : global::System.Data.DataRow {
@@ -1392,10 +852,10 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime HORARIO_ATENDIMENTO {
+            public System.TimeSpan HORARIO_ATENDIMENTO {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletb_atendimento.HORARIO_ATENDIMENTOColumn]));
+                        return ((global::System.TimeSpan)(this[this.tabletb_atendimento.HORARIO_ATENDIMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'HORARIO_ATENDIMENTO\' in table \'tb_atendimento\' is DBNull.", e);
@@ -1424,10 +884,10 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime HORACONSULTA_ATENDIMENTO {
+            public System.TimeSpan HORACONSULTA_ATENDIMENTO {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletb_atendimento.HORACONSULTA_ATENDIMENTOColumn]));
+                        return ((global::System.TimeSpan)(this[this.tabletb_atendimento.HORACONSULTA_ATENDIMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'HORACONSULTA_ATENDIMENTO\' in table \'tb_atendimento\' is DBNu" +
@@ -1460,13 +920,7 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ESTABELECIMENTOorigem_ATENDIMENTO {
                 get {
-                    try {
-                        return ((int)(this[this.tabletb_atendimento.ESTABELECIMENTOorigem_ATENDIMENTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ESTABELECIMENTOorigem_ATENDIMENTO\' in table \'tb_atendimento" +
-                                "\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletb_atendimento.ESTABELECIMENTOorigem_ATENDIMENTOColumn]));
                 }
                 set {
                     this[this.tabletb_atendimento.ESTABELECIMENTOorigem_ATENDIMENTOColumn] = value;
@@ -1477,13 +931,7 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ESTABELECIMENTOdestino_ATENDIMENTO {
                 get {
-                    try {
-                        return ((int)(this[this.tabletb_atendimento.ESTABELECIMENTOdestino_ATENDIMENTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ESTABELECIMENTOdestino_ATENDIMENTO\' in table \'tb_atendiment" +
-                                "o\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletb_atendimento.ESTABELECIMENTOdestino_ATENDIMENTOColumn]));
                 }
                 set {
                     this[this.tabletb_atendimento.ESTABELECIMENTOdestino_ATENDIMENTOColumn] = value;
@@ -1494,13 +942,7 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int PACIENTEorigem_ATENDIMENTO {
                 get {
-                    try {
-                        return ((int)(this[this.tabletb_atendimento.PACIENTEorigem_ATENDIMENTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PACIENTEorigem_ATENDIMENTO\' in table \'tb_atendimento\' is DB" +
-                                "Null.", e);
-                    }
+                    return ((int)(this[this.tabletb_atendimento.PACIENTEorigem_ATENDIMENTOColumn]));
                 }
                 set {
                     this[this.tabletb_atendimento.PACIENTEorigem_ATENDIMENTOColumn] = value;
@@ -1511,13 +953,7 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int PACIENTEdestino_ATENDIMENTO {
                 get {
-                    try {
-                        return ((int)(this[this.tabletb_atendimento.PACIENTEdestino_ATENDIMENTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PACIENTEdestino_ATENDIMENTO\' in table \'tb_atendimento\' is D" +
-                                "BNull.", e);
-                    }
+                    return ((int)(this[this.tabletb_atendimento.PACIENTEdestino_ATENDIMENTOColumn]));
                 }
                 set {
                     this[this.tabletb_atendimento.PACIENTEdestino_ATENDIMENTOColumn] = value;
@@ -1630,13 +1066,7 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL {
                 get {
-                    try {
-                        return ((int)(this[this.tabletb_atendimento.TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL\' in table \'" +
-                                "tb_atendimento\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletb_atendimento.TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELColumn]));
                 }
                 set {
                     this[this.tabletb_atendimento.TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELColumn] = value;
@@ -1645,10 +1075,21 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int STATUS_ATENDIMENTO {
+            public int TB_EMPENHO_idEMPENHO {
+                get {
+                    return ((int)(this[this.tabletb_atendimento.TB_EMPENHO_idEMPENHOColumn]));
+                }
+                set {
+                    this[this.tabletb_atendimento.TB_EMPENHO_idEMPENHOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string STATUS_ATENDIMENTO {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_atendimento.STATUS_ATENDIMENTOColumn]));
+                        return ((string)(this[this.tabletb_atendimento.STATUS_ATENDIMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'STATUS_ATENDIMENTO\' in table \'tb_atendimento\' is DBNull.", e);
@@ -1656,6 +1097,22 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 }
                 set {
                     this[this.tabletb_atendimento.STATUS_ATENDIMENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TELEFONEPACIENTE {
+                get {
+                    try {
+                        return ((string)(this[this.tabletb_atendimento.TELEFONEPACIENTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TELEFONEPACIENTE\' in table \'tb_atendimento\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletb_atendimento.TELEFONEPACIENTEColumn] = value;
                 }
             }
             
@@ -1673,23 +1130,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
                 }
                 set {
                     this[this.tabletb_atendimento.SOLICITANTE_ATENDIMENTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string OBSERVACAO_ATENDIMENTO {
-                get {
-                    try {
-                        return ((string)(this[this.tabletb_atendimento.OBSERVACAO_ATENDIMENTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OBSERVACAO_ATENDIMENTO\' in table \'tb_atendimento\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tabletb_atendimento.OBSERVACAO_ATENDIMENTOColumn] = value;
                 }
             }
             
@@ -1739,54 +1179,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDATACONSULTA_ATENDIMENTONull() {
                 this[this.tabletb_atendimento.DATACONSULTA_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsESTABELECIMENTOorigem_ATENDIMENTONull() {
-                return this.IsNull(this.tabletb_atendimento.ESTABELECIMENTOorigem_ATENDIMENTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetESTABELECIMENTOorigem_ATENDIMENTONull() {
-                this[this.tabletb_atendimento.ESTABELECIMENTOorigem_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsESTABELECIMENTOdestino_ATENDIMENTONull() {
-                return this.IsNull(this.tabletb_atendimento.ESTABELECIMENTOdestino_ATENDIMENTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetESTABELECIMENTOdestino_ATENDIMENTONull() {
-                this[this.tabletb_atendimento.ESTABELECIMENTOdestino_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPACIENTEorigem_ATENDIMENTONull() {
-                return this.IsNull(this.tabletb_atendimento.PACIENTEorigem_ATENDIMENTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPACIENTEorigem_ATENDIMENTONull() {
-                this[this.tabletb_atendimento.PACIENTEorigem_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPACIENTEdestino_ATENDIMENTONull() {
-                return this.IsNull(this.tabletb_atendimento.PACIENTEdestino_ATENDIMENTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPACIENTEdestino_ATENDIMENTONull() {
-                this[this.tabletb_atendimento.PACIENTEdestino_ATENDIMENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1863,18 +1255,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELNull() {
-                return this.IsNull(this.tabletb_atendimento.TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELNull() {
-                this[this.tabletb_atendimento.TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVELColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSTATUS_ATENDIMENTONull() {
                 return this.IsNull(this.tabletb_atendimento.STATUS_ATENDIMENTOColumn);
             }
@@ -1887,6 +1267,18 @@ namespace TRANSPORTESANITARIO.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTELEFONEPACIENTENull() {
+                return this.IsNull(this.tabletb_atendimento.TELEFONEPACIENTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTELEFONEPACIENTENull() {
+                this[this.tabletb_atendimento.TELEFONEPACIENTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSOLICITANTE_ATENDIMENTONull() {
                 return this.IsNull(this.tabletb_atendimento.SOLICITANTE_ATENDIMENTOColumn);
             }
@@ -1895,472 +1287,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSOLICITANTE_ATENDIMENTONull() {
                 this[this.tabletb_atendimento.SOLICITANTE_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOBSERVACAO_ATENDIMENTONull() {
-                return this.IsNull(this.tabletb_atendimento.OBSERVACAO_ATENDIMENTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOBSERVACAO_ATENDIMENTONull() {
-                this[this.tabletb_atendimento.OBSERVACAO_ATENDIMENTOColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ViewEmpenhosDiaRow : global::System.Data.DataRow {
-            
-            private ViewEmpenhosDiaDataTable tableViewEmpenhosDia;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ViewEmpenhosDiaRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableViewEmpenhosDia = ((ViewEmpenhosDiaDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime DATA {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableViewEmpenhosDia.DATAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DATA\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.DATAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime HORA {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableViewEmpenhosDia.HORAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HORA\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.HORAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idOrigem {
-                get {
-                    return ((int)(this[this.tableViewEmpenhosDia.idOrigemColumn]));
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.idOrigemColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NomeEstabelecimentoOrigem {
-                get {
-                    try {
-                        return ((string)(this[this.tableViewEmpenhosDia.NomeEstabelecimentoOrigemColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NomeEstabelecimentoOrigem\' in table \'ViewEmpenhosDia\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.NomeEstabelecimentoOrigemColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idDestino {
-                get {
-                    return ((int)(this[this.tableViewEmpenhosDia.idDestinoColumn]));
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.idDestinoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NomeEstabelecimentoDestino {
-                get {
-                    try {
-                        return ((string)(this[this.tableViewEmpenhosDia.NomeEstabelecimentoDestinoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NomeEstabelecimentoDestino\' in table \'ViewEmpenhosDia\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.NomeEstabelecimentoDestinoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idPacienteOrigem {
-                get {
-                    return ((int)(this[this.tableViewEmpenhosDia.idPacienteOrigemColumn]));
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.idPacienteOrigemColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NomePacienteOrigem {
-                get {
-                    try {
-                        return ((string)(this[this.tableViewEmpenhosDia.NomePacienteOrigemColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NomePacienteOrigem\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.NomePacienteOrigemColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idPacienteDestino {
-                get {
-                    return ((int)(this[this.tableViewEmpenhosDia.idPacienteDestinoColumn]));
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.idPacienteDestinoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NomePacienteDestino {
-                get {
-                    try {
-                        return ((string)(this[this.tableViewEmpenhosDia.NomePacienteDestinoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NomePacienteDestino\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.NomePacienteDestinoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PADiastolica {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.PADiastolicaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PADiastolica\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.PADiastolicaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PASistolica {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.PASistolicaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PASistolica\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.PASistolicaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FrequenciaCardiaca {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.FrequenciaCardiacaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FrequenciaCardiaca\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.FrequenciaCardiacaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FrequenciaRespiratoria {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.FrequenciaRespiratoriaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FrequenciaRespiratoria\' in table \'ViewEmpenhosDia\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.FrequenciaRespiratoriaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Temperatura {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.TemperaturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Temperatura\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.TemperaturaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Saturacao {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.SaturacaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Saturacao\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.SaturacaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int StatusAtendimento {
-                get {
-                    try {
-                        return ((int)(this[this.tableViewEmpenhosDia.StatusAtendimentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'StatusAtendimento\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.StatusAtendimentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Observacao {
-                get {
-                    try {
-                        return ((string)(this[this.tableViewEmpenhosDia.ObservacaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Observacao\' in table \'ViewEmpenhosDia\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableViewEmpenhosDia.ObservacaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDATANull() {
-                return this.IsNull(this.tableViewEmpenhosDia.DATAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDATANull() {
-                this[this.tableViewEmpenhosDia.DATAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHORANull() {
-                return this.IsNull(this.tableViewEmpenhosDia.HORAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHORANull() {
-                this[this.tableViewEmpenhosDia.HORAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNomeEstabelecimentoOrigemNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.NomeEstabelecimentoOrigemColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNomeEstabelecimentoOrigemNull() {
-                this[this.tableViewEmpenhosDia.NomeEstabelecimentoOrigemColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNomeEstabelecimentoDestinoNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.NomeEstabelecimentoDestinoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNomeEstabelecimentoDestinoNull() {
-                this[this.tableViewEmpenhosDia.NomeEstabelecimentoDestinoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNomePacienteOrigemNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.NomePacienteOrigemColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNomePacienteOrigemNull() {
-                this[this.tableViewEmpenhosDia.NomePacienteOrigemColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNomePacienteDestinoNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.NomePacienteDestinoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNomePacienteDestinoNull() {
-                this[this.tableViewEmpenhosDia.NomePacienteDestinoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPADiastolicaNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.PADiastolicaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPADiastolicaNull() {
-                this[this.tableViewEmpenhosDia.PADiastolicaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPASistolicaNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.PASistolicaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPASistolicaNull() {
-                this[this.tableViewEmpenhosDia.PASistolicaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFrequenciaCardiacaNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.FrequenciaCardiacaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFrequenciaCardiacaNull() {
-                this[this.tableViewEmpenhosDia.FrequenciaCardiacaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFrequenciaRespiratoriaNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.FrequenciaRespiratoriaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFrequenciaRespiratoriaNull() {
-                this[this.tableViewEmpenhosDia.FrequenciaRespiratoriaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTemperaturaNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.TemperaturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTemperaturaNull() {
-                this[this.tableViewEmpenhosDia.TemperaturaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSaturacaoNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.SaturacaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSaturacaoNull() {
-                this[this.tableViewEmpenhosDia.SaturacaoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsStatusAtendimentoNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.StatusAtendimentoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetStatusAtendimentoNull() {
-                this[this.tableViewEmpenhosDia.StatusAtendimentoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsObservacaoNull() {
-                return this.IsNull(this.tableViewEmpenhosDia.ObservacaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetObservacaoNull() {
-                this[this.tableViewEmpenhosDia.ObservacaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2384,40 +1310,6 @@ namespace TRANSPORTESANITARIO.BancoDados {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tb_atendimentoRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ViewEmpenhosDiaRowChangeEvent : global::System.EventArgs {
-            
-            private ViewEmpenhosDiaRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRowChangeEvent(ViewEmpenhosDiaRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewEmpenhosDiaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2573,9 +1465,10 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TEMPERATURA_ATENDIMENTO", "TEMPERATURA_ATENDIMENTO");
             tableMapping.ColumnMappings.Add("SATURACAO_ATENDIMENTO", "SATURACAO_ATENDIMENTO");
             tableMapping.ColumnMappings.Add("TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL", "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL");
+            tableMapping.ColumnMappings.Add("TB_EMPENHO_idEMPENHO", "TB_EMPENHO_idEMPENHO");
             tableMapping.ColumnMappings.Add("STATUS_ATENDIMENTO", "STATUS_ATENDIMENTO");
+            tableMapping.ColumnMappings.Add("TELEFONEPACIENTE", "TELEFONEPACIENTE");
             tableMapping.ColumnMappings.Add("SOLICITANTE_ATENDIMENTO", "SOLICITANTE_ATENDIMENTO");
-            tableMapping.ColumnMappings.Add("OBSERVACAO_ATENDIMENTO", "OBSERVACAO_ATENDIMENTO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2587,36 +1480,30 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
                 "MENTO` IS NULL) OR (`HORACONSULTA_ATENDIMENTO` = @Original_HORACONSULTA_ATENDIME" +
                 "NTO)) AND ((@IsNull_DATACONSULTA_ATENDIMENTO = 1 AND `DATACONSULTA_ATENDIMENTO` " +
                 "IS NULL) OR (`DATACONSULTA_ATENDIMENTO` = @Original_DATACONSULTA_ATENDIMENTO)) A" +
-                "ND ((@IsNull_ESTABELECIMENTOorigem_ATENDIMENTO = 1 AND `ESTABELECIMENTOorigem_AT" +
-                "ENDIMENTO` IS NULL) OR (`ESTABELECIMENTOorigem_ATENDIMENTO` = @Original_ESTABELE" +
-                "CIMENTOorigem_ATENDIMENTO)) AND ((@IsNull_ESTABELECIMENTOdestino_ATENDIMENTO = 1" +
-                " AND `ESTABELECIMENTOdestino_ATENDIMENTO` IS NULL) OR (`ESTABELECIMENTOdestino_A" +
-                "TENDIMENTO` = @Original_ESTABELECIMENTOdestino_ATENDIMENTO)) AND ((@IsNull_PACIE" +
-                "NTEorigem_ATENDIMENTO = 1 AND `PACIENTEorigem_ATENDIMENTO` IS NULL) OR (`PACIENT" +
-                "Eorigem_ATENDIMENTO` = @Original_PACIENTEorigem_ATENDIMENTO)) AND ((@IsNull_PACI" +
-                "ENTEdestino_ATENDIMENTO = 1 AND `PACIENTEdestino_ATENDIMENTO` IS NULL) OR (`PACI" +
-                "ENTEdestino_ATENDIMENTO` = @Original_PACIENTEdestino_ATENDIMENTO)) AND ((@IsNull" +
-                "_PADISTOLICA_ATENDIMENTO = 1 AND `PADISTOLICA_ATENDIMENTO` IS NULL) OR (`PADISTO" +
-                "LICA_ATENDIMENTO` = @Original_PADISTOLICA_ATENDIMENTO)) AND ((@IsNull_PASISTOLIC" +
-                "A_ATENDIMENTO = 1 AND `PASISTOLICA_ATENDIMENTO` IS NULL) OR (`PASISTOLICA_ATENDI" +
-                "MENTO` = @Original_PASISTOLICA_ATENDIMENTO)) AND ((@IsNull_FREQUENCIACARDIACA_AT" +
-                "ENDIMENTO = 1 AND `FREQUENCIACARDIACA_ATENDIMENTO` IS NULL) OR (`FREQUENCIACARDI" +
-                "ACA_ATENDIMENTO` = @Original_FREQUENCIACARDIACA_ATENDIMENTO)) AND ((@IsNull_FREQ" +
-                "UENCIARESPIRATORIA_ATENDIMENTO = 1 AND `FREQUENCIARESPIRATORIA_ATENDIMENTO` IS N" +
-                "ULL) OR (`FREQUENCIARESPIRATORIA_ATENDIMENTO` = @Original_FREQUENCIARESPIRATORIA" +
-                "_ATENDIMENTO)) AND ((@IsNull_TEMPERATURA_ATENDIMENTO = 1 AND `TEMPERATURA_ATENDI" +
-                "MENTO` IS NULL) OR (`TEMPERATURA_ATENDIMENTO` = @Original_TEMPERATURA_ATENDIMENT" +
-                "O)) AND ((@IsNull_SATURACAO_ATENDIMENTO = 1 AND `SATURACAO_ATENDIMENTO` IS NULL)" +
-                " OR (`SATURACAO_ATENDIMENTO` = @Original_SATURACAO_ATENDIMENTO)) AND ((@IsNull_T" +
-                "B_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL = 1 AND `TB_FUNCIONARIO_MATRICULA" +
-                "_FUNCIONARIORESPONSAVEL` IS NULL) OR (`TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPO" +
-                "NSAVEL` = @Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL)) AND ((@IsN" +
-                "ull_STATUS_ATENDIMENTO = 1 AND `STATUS_ATENDIMENTO` IS NULL) OR (`STATUS_ATENDIM" +
-                "ENTO` = @Original_STATUS_ATENDIMENTO)) AND ((@IsNull_SOLICITANTE_ATENDIMENTO = 1" +
-                " AND `SOLICITANTE_ATENDIMENTO` IS NULL) OR (`SOLICITANTE_ATENDIMENTO` = @Origina" +
-                "l_SOLICITANTE_ATENDIMENTO)) AND ((@IsNull_OBSERVACAO_ATENDIMENTO = 1 AND `OBSERV" +
-                "ACAO_ATENDIMENTO` IS NULL) OR (`OBSERVACAO_ATENDIMENTO` = @Original_OBSERVACAO_A" +
-                "TENDIMENTO)))";
+                "ND (`ESTABELECIMENTOorigem_ATENDIMENTO` = @Original_ESTABELECIMENTOorigem_ATENDI" +
+                "MENTO) AND (`ESTABELECIMENTOdestino_ATENDIMENTO` = @Original_ESTABELECIMENTOdest" +
+                "ino_ATENDIMENTO) AND (`PACIENTEorigem_ATENDIMENTO` = @Original_PACIENTEorigem_AT" +
+                "ENDIMENTO) AND (`PACIENTEdestino_ATENDIMENTO` = @Original_PACIENTEdestino_ATENDI" +
+                "MENTO) AND ((@IsNull_PADISTOLICA_ATENDIMENTO = 1 AND `PADISTOLICA_ATENDIMENTO` I" +
+                "S NULL) OR (`PADISTOLICA_ATENDIMENTO` = @Original_PADISTOLICA_ATENDIMENTO)) AND " +
+                "((@IsNull_PASISTOLICA_ATENDIMENTO = 1 AND `PASISTOLICA_ATENDIMENTO` IS NULL) OR " +
+                "(`PASISTOLICA_ATENDIMENTO` = @Original_PASISTOLICA_ATENDIMENTO)) AND ((@IsNull_F" +
+                "REQUENCIACARDIACA_ATENDIMENTO = 1 AND `FREQUENCIACARDIACA_ATENDIMENTO` IS NULL) " +
+                "OR (`FREQUENCIACARDIACA_ATENDIMENTO` = @Original_FREQUENCIACARDIACA_ATENDIMENTO)" +
+                ") AND ((@IsNull_FREQUENCIARESPIRATORIA_ATENDIMENTO = 1 AND `FREQUENCIARESPIRATOR" +
+                "IA_ATENDIMENTO` IS NULL) OR (`FREQUENCIARESPIRATORIA_ATENDIMENTO` = @Original_FR" +
+                "EQUENCIARESPIRATORIA_ATENDIMENTO)) AND ((@IsNull_TEMPERATURA_ATENDIMENTO = 1 AND" +
+                " `TEMPERATURA_ATENDIMENTO` IS NULL) OR (`TEMPERATURA_ATENDIMENTO` = @Original_TE" +
+                "MPERATURA_ATENDIMENTO)) AND ((@IsNull_SATURACAO_ATENDIMENTO = 1 AND `SATURACAO_A" +
+                "TENDIMENTO` IS NULL) OR (`SATURACAO_ATENDIMENTO` = @Original_SATURACAO_ATENDIMEN" +
+                "TO)) AND (`TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL` = @Original_TB_FUNCI" +
+                "ONARIO_MATRICULA_FUNCIONARIORESPONSAVEL) AND (`TB_EMPENHO_idEMPENHO` = @Original" +
+                "_TB_EMPENHO_idEMPENHO) AND ((@IsNull_STATUS_ATENDIMENTO = 1 AND `STATUS_ATENDIME" +
+                "NTO` IS NULL) OR (`STATUS_ATENDIMENTO` = @Original_STATUS_ATENDIMENTO)) AND ((@I" +
+                "sNull_TELEFONEPACIENTE = 1 AND `TELEFONEPACIENTE` IS NULL) OR (`TELEFONEPACIENTE" +
+                "` = @Original_TELEFONEPACIENTE)) AND ((@IsNull_SOLICITANTE_ATENDIMENTO = 1 AND `" +
+                "SOLICITANTE_ATENDIMENTO` IS NULL) OR (`SOLICITANTE_ATENDIMENTO` = @Original_SOLI" +
+                "CITANTE_ATENDIMENTO)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_idATENDIMENTO";
@@ -2637,8 +1524,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_HORARIO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORARIO_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -2654,8 +1541,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DATA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -2671,8 +1558,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_HORACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORACONSULTA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -2688,20 +1575,11 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DATACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATACONSULTA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_ESTABELECIMENTOorigem_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOorigem_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ESTABELECIMENTOorigem_ATENDIMENTO";
@@ -2712,15 +1590,6 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_ESTABELECIMENTOdestino_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOdestino_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ESTABELECIMENTOdestino_ATENDIMENTO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -2729,30 +1598,12 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_PACIENTEorigem_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEorigem_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PACIENTEorigem_ATENDIMENTO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PACIENTEorigem_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_PACIENTEdestino_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEdestino_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PACIENTEdestino_ATENDIMENTO";
@@ -2865,20 +1716,19 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TB_EMPENHO_idEMPENHO";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "TB_EMPENHO_idEMPENHO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -2892,10 +1742,27 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_STATUS_ATENDIMENTO";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "STATUS_ATENDIMENTO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_TELEFONEPACIENTE";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "STATUS_ATENDIMENTO";
+            param.SourceColumn = "TELEFONEPACIENTE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TELEFONEPACIENTE";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TELEFONEPACIENTE";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -2915,26 +1782,9 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceColumn = "SOLICITANTE_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `tb_atendimento` (`idATENDIMENTO`, `HORARIO_ATENDIMENTO`, `DATA_ATENDIMENTO`, `HORACONSULTA_ATENDIMENTO`, `DATACONSULTA_ATENDIMENTO`, `ESTABELECIMENTOorigem_ATENDIMENTO`, `ESTABELECIMENTOdestino_ATENDIMENTO`, `PACIENTEorigem_ATENDIMENTO`, `PACIENTEdestino_ATENDIMENTO`, `PADISTOLICA_ATENDIMENTO`, `PASISTOLICA_ATENDIMENTO`, `FREQUENCIACARDIACA_ATENDIMENTO`, `FREQUENCIARESPIRATORIA_ATENDIMENTO`, `TEMPERATURA_ATENDIMENTO`, `SATURACAO_ATENDIMENTO`, `TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL`, `STATUS_ATENDIMENTO`, `SOLICITANTE_ATENDIMENTO`, `OBSERVACAO_ATENDIMENTO`) VALUES (@idATENDIMENTO, @HORARIO_ATENDIMENTO, @DATA_ATENDIMENTO, @HORACONSULTA_ATENDIMENTO, @DATACONSULTA_ATENDIMENTO, @ESTABELECIMENTOorigem_ATENDIMENTO, @ESTABELECIMENTOdestino_ATENDIMENTO, @PACIENTEorigem_ATENDIMENTO, @PACIENTEdestino_ATENDIMENTO, @PADISTOLICA_ATENDIMENTO, @PASISTOLICA_ATENDIMENTO, @FREQUENCIACARDIACA_ATENDIMENTO, @FREQUENCIARESPIRATORIA_ATENDIMENTO, @TEMPERATURA_ATENDIMENTO, @SATURACAO_ATENDIMENTO, @TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, @STATUS_ATENDIMENTO, @SOLICITANTE_ATENDIMENTO, @OBSERVACAO_ATENDIMENTO)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `tb_atendimento` (`idATENDIMENTO`, `HORARIO_ATENDIMENTO`, `DATA_ATENDIMENTO`, `HORACONSULTA_ATENDIMENTO`, `DATACONSULTA_ATENDIMENTO`, `ESTABELECIMENTOorigem_ATENDIMENTO`, `ESTABELECIMENTOdestino_ATENDIMENTO`, `PACIENTEorigem_ATENDIMENTO`, `PACIENTEdestino_ATENDIMENTO`, `PADISTOLICA_ATENDIMENTO`, `PASISTOLICA_ATENDIMENTO`, `FREQUENCIACARDIACA_ATENDIMENTO`, `FREQUENCIARESPIRATORIA_ATENDIMENTO`, `TEMPERATURA_ATENDIMENTO`, `SATURACAO_ATENDIMENTO`, `TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL`, `TB_EMPENHO_idEMPENHO`, `STATUS_ATENDIMENTO`, `TELEFONEPACIENTE`, `SOLICITANTE_ATENDIMENTO`) VALUES (@idATENDIMENTO, @HORARIO_ATENDIMENTO, @DATA_ATENDIMENTO, @HORACONSULTA_ATENDIMENTO, @DATACONSULTA_ATENDIMENTO, @ESTABELECIMENTOorigem_ATENDIMENTO, @ESTABELECIMENTOdestino_ATENDIMENTO, @PACIENTEorigem_ATENDIMENTO, @PACIENTEdestino_ATENDIMENTO, @PADISTOLICA_ATENDIMENTO, @PASISTOLICA_ATENDIMENTO, @FREQUENCIACARDIACA_ATENDIMENTO, @FREQUENCIARESPIRATORIA_ATENDIMENTO, @TEMPERATURA_ATENDIMENTO, @SATURACAO_ATENDIMENTO, @TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, @TB_EMPENHO_idEMPENHO, @STATUS_ATENDIMENTO, @TELEFONEPACIENTE, @SOLICITANTE_ATENDIMENTO)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idATENDIMENTO";
@@ -2945,29 +1795,29 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@HORARIO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORARIO_ATENDIMENTO";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DATA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATA_ATENDIMENTO";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@HORACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORACONSULTA_ATENDIMENTO";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DATACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATACONSULTA_ATENDIMENTO";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -3049,11 +1899,25 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@STATUS_ATENDIMENTO";
+            param.ParameterName = "@TB_EMPENHO_idEMPENHO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
+            param.SourceColumn = "TB_EMPENHO_idEMPENHO";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@STATUS_ATENDIMENTO";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
             param.SourceColumn = "STATUS_ATENDIMENTO";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@TELEFONEPACIENTE";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TELEFONEPACIENTE";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@SOLICITANTE_ATENDIMENTO";
@@ -3061,13 +1925,6 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "SOLICITANTE_ATENDIMENTO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -3083,46 +1940,40 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
                 "SPIRATORIA_ATENDIMENTO` = @FREQUENCIARESPIRATORIA_ATENDIMENTO, `TEMPERATURA_ATEN" +
                 "DIMENTO` = @TEMPERATURA_ATENDIMENTO, `SATURACAO_ATENDIMENTO` = @SATURACAO_ATENDI" +
                 "MENTO, `TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL` = @TB_FUNCIONARIO_MATRI" +
-                "CULA_FUNCIONARIORESPONSAVEL, `STATUS_ATENDIMENTO` = @STATUS_ATENDIMENTO, `SOLICI" +
-                "TANTE_ATENDIMENTO` = @SOLICITANTE_ATENDIMENTO, `OBSERVACAO_ATENDIMENTO` = @OBSER" +
-                "VACAO_ATENDIMENTO WHERE ((`idATENDIMENTO` = @Original_idATENDIMENTO) AND ((@IsNu" +
-                "ll_HORARIO_ATENDIMENTO = 1 AND `HORARIO_ATENDIMENTO` IS NULL) OR (`HORARIO_ATEND" +
-                "IMENTO` = @Original_HORARIO_ATENDIMENTO)) AND ((@IsNull_DATA_ATENDIMENTO = 1 AND" +
-                " `DATA_ATENDIMENTO` IS NULL) OR (`DATA_ATENDIMENTO` = @Original_DATA_ATENDIMENTO" +
-                ")) AND ((@IsNull_HORACONSULTA_ATENDIMENTO = 1 AND `HORACONSULTA_ATENDIMENTO` IS " +
-                "NULL) OR (`HORACONSULTA_ATENDIMENTO` = @Original_HORACONSULTA_ATENDIMENTO)) AND " +
-                "((@IsNull_DATACONSULTA_ATENDIMENTO = 1 AND `DATACONSULTA_ATENDIMENTO` IS NULL) O" +
-                "R (`DATACONSULTA_ATENDIMENTO` = @Original_DATACONSULTA_ATENDIMENTO)) AND ((@IsNu" +
-                "ll_ESTABELECIMENTOorigem_ATENDIMENTO = 1 AND `ESTABELECIMENTOorigem_ATENDIMENTO`" +
-                " IS NULL) OR (`ESTABELECIMENTOorigem_ATENDIMENTO` = @Original_ESTABELECIMENTOori" +
-                "gem_ATENDIMENTO)) AND ((@IsNull_ESTABELECIMENTOdestino_ATENDIMENTO = 1 AND `ESTA" +
-                "BELECIMENTOdestino_ATENDIMENTO` IS NULL) OR (`ESTABELECIMENTOdestino_ATENDIMENTO" +
-                "` = @Original_ESTABELECIMENTOdestino_ATENDIMENTO)) AND ((@IsNull_PACIENTEorigem_" +
-                "ATENDIMENTO = 1 AND `PACIENTEorigem_ATENDIMENTO` IS NULL) OR (`PACIENTEorigem_AT" +
-                "ENDIMENTO` = @Original_PACIENTEorigem_ATENDIMENTO)) AND ((@IsNull_PACIENTEdestin" +
-                "o_ATENDIMENTO = 1 AND `PACIENTEdestino_ATENDIMENTO` IS NULL) OR (`PACIENTEdestin" +
-                "o_ATENDIMENTO` = @Original_PACIENTEdestino_ATENDIMENTO)) AND ((@IsNull_PADISTOLI" +
-                "CA_ATENDIMENTO = 1 AND `PADISTOLICA_ATENDIMENTO` IS NULL) OR (`PADISTOLICA_ATEND" +
-                "IMENTO` = @Original_PADISTOLICA_ATENDIMENTO)) AND ((@IsNull_PASISTOLICA_ATENDIME" +
-                "NTO = 1 AND `PASISTOLICA_ATENDIMENTO` IS NULL) OR (`PASISTOLICA_ATENDIMENTO` = @" +
-                "Original_PASISTOLICA_ATENDIMENTO)) AND ((@IsNull_FREQUENCIACARDIACA_ATENDIMENTO " +
-                "= 1 AND `FREQUENCIACARDIACA_ATENDIMENTO` IS NULL) OR (`FREQUENCIACARDIACA_ATENDI" +
-                "MENTO` = @Original_FREQUENCIACARDIACA_ATENDIMENTO)) AND ((@IsNull_FREQUENCIARESP" +
-                "IRATORIA_ATENDIMENTO = 1 AND `FREQUENCIARESPIRATORIA_ATENDIMENTO` IS NULL) OR (`" +
-                "FREQUENCIARESPIRATORIA_ATENDIMENTO` = @Original_FREQUENCIARESPIRATORIA_ATENDIMEN" +
-                "TO)) AND ((@IsNull_TEMPERATURA_ATENDIMENTO = 1 AND `TEMPERATURA_ATENDIMENTO` IS " +
-                "NULL) OR (`TEMPERATURA_ATENDIMENTO` = @Original_TEMPERATURA_ATENDIMENTO)) AND ((" +
-                "@IsNull_SATURACAO_ATENDIMENTO = 1 AND `SATURACAO_ATENDIMENTO` IS NULL) OR (`SATU" +
-                "RACAO_ATENDIMENTO` = @Original_SATURACAO_ATENDIMENTO)) AND ((@IsNull_TB_FUNCIONA" +
-                "RIO_MATRICULA_FUNCIONARIORESPONSAVEL = 1 AND `TB_FUNCIONARIO_MATRICULA_FUNCIONAR" +
-                "IORESPONSAVEL` IS NULL) OR (`TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL` = " +
-                "@Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL)) AND ((@IsNull_STATUS" +
-                "_ATENDIMENTO = 1 AND `STATUS_ATENDIMENTO` IS NULL) OR (`STATUS_ATENDIMENTO` = @O" +
-                "riginal_STATUS_ATENDIMENTO)) AND ((@IsNull_SOLICITANTE_ATENDIMENTO = 1 AND `SOLI" +
-                "CITANTE_ATENDIMENTO` IS NULL) OR (`SOLICITANTE_ATENDIMENTO` = @Original_SOLICITA" +
-                "NTE_ATENDIMENTO)) AND ((@IsNull_OBSERVACAO_ATENDIMENTO = 1 AND `OBSERVACAO_ATEND" +
-                "IMENTO` IS NULL) OR (`OBSERVACAO_ATENDIMENTO` = @Original_OBSERVACAO_ATENDIMENTO" +
-                ")))";
+                "CULA_FUNCIONARIORESPONSAVEL, `TB_EMPENHO_idEMPENHO` = @TB_EMPENHO_idEMPENHO, `ST" +
+                "ATUS_ATENDIMENTO` = @STATUS_ATENDIMENTO, `TELEFONEPACIENTE` = @TELEFONEPACIENTE," +
+                " `SOLICITANTE_ATENDIMENTO` = @SOLICITANTE_ATENDIMENTO WHERE ((`idATENDIMENTO` = " +
+                "@Original_idATENDIMENTO) AND ((@IsNull_HORARIO_ATENDIMENTO = 1 AND `HORARIO_ATEN" +
+                "DIMENTO` IS NULL) OR (`HORARIO_ATENDIMENTO` = @Original_HORARIO_ATENDIMENTO)) AN" +
+                "D ((@IsNull_DATA_ATENDIMENTO = 1 AND `DATA_ATENDIMENTO` IS NULL) OR (`DATA_ATEND" +
+                "IMENTO` = @Original_DATA_ATENDIMENTO)) AND ((@IsNull_HORACONSULTA_ATENDIMENTO = " +
+                "1 AND `HORACONSULTA_ATENDIMENTO` IS NULL) OR (`HORACONSULTA_ATENDIMENTO` = @Orig" +
+                "inal_HORACONSULTA_ATENDIMENTO)) AND ((@IsNull_DATACONSULTA_ATENDIMENTO = 1 AND `" +
+                "DATACONSULTA_ATENDIMENTO` IS NULL) OR (`DATACONSULTA_ATENDIMENTO` = @Original_DA" +
+                "TACONSULTA_ATENDIMENTO)) AND (`ESTABELECIMENTOorigem_ATENDIMENTO` = @Original_ES" +
+                "TABELECIMENTOorigem_ATENDIMENTO) AND (`ESTABELECIMENTOdestino_ATENDIMENTO` = @Or" +
+                "iginal_ESTABELECIMENTOdestino_ATENDIMENTO) AND (`PACIENTEorigem_ATENDIMENTO` = @" +
+                "Original_PACIENTEorigem_ATENDIMENTO) AND (`PACIENTEdestino_ATENDIMENTO` = @Origi" +
+                "nal_PACIENTEdestino_ATENDIMENTO) AND ((@IsNull_PADISTOLICA_ATENDIMENTO = 1 AND `" +
+                "PADISTOLICA_ATENDIMENTO` IS NULL) OR (`PADISTOLICA_ATENDIMENTO` = @Original_PADI" +
+                "STOLICA_ATENDIMENTO)) AND ((@IsNull_PASISTOLICA_ATENDIMENTO = 1 AND `PASISTOLICA" +
+                "_ATENDIMENTO` IS NULL) OR (`PASISTOLICA_ATENDIMENTO` = @Original_PASISTOLICA_ATE" +
+                "NDIMENTO)) AND ((@IsNull_FREQUENCIACARDIACA_ATENDIMENTO = 1 AND `FREQUENCIACARDI" +
+                "ACA_ATENDIMENTO` IS NULL) OR (`FREQUENCIACARDIACA_ATENDIMENTO` = @Original_FREQU" +
+                "ENCIACARDIACA_ATENDIMENTO)) AND ((@IsNull_FREQUENCIARESPIRATORIA_ATENDIMENTO = 1" +
+                " AND `FREQUENCIARESPIRATORIA_ATENDIMENTO` IS NULL) OR (`FREQUENCIARESPIRATORIA_A" +
+                "TENDIMENTO` = @Original_FREQUENCIARESPIRATORIA_ATENDIMENTO)) AND ((@IsNull_TEMPE" +
+                "RATURA_ATENDIMENTO = 1 AND `TEMPERATURA_ATENDIMENTO` IS NULL) OR (`TEMPERATURA_A" +
+                "TENDIMENTO` = @Original_TEMPERATURA_ATENDIMENTO)) AND ((@IsNull_SATURACAO_ATENDI" +
+                "MENTO = 1 AND `SATURACAO_ATENDIMENTO` IS NULL) OR (`SATURACAO_ATENDIMENTO` = @Or" +
+                "iginal_SATURACAO_ATENDIMENTO)) AND (`TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONS" +
+                "AVEL` = @Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL) AND (`TB_EMPE" +
+                "NHO_idEMPENHO` = @Original_TB_EMPENHO_idEMPENHO) AND ((@IsNull_STATUS_ATENDIMENT" +
+                "O = 1 AND `STATUS_ATENDIMENTO` IS NULL) OR (`STATUS_ATENDIMENTO` = @Original_STA" +
+                "TUS_ATENDIMENTO)) AND ((@IsNull_TELEFONEPACIENTE = 1 AND `TELEFONEPACIENTE` IS N" +
+                "ULL) OR (`TELEFONEPACIENTE` = @Original_TELEFONEPACIENTE)) AND ((@IsNull_SOLICIT" +
+                "ANTE_ATENDIMENTO = 1 AND `SOLICITANTE_ATENDIMENTO` IS NULL) OR (`SOLICITANTE_ATE" +
+                "NDIMENTO` = @Original_SOLICITANTE_ATENDIMENTO)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idATENDIMENTO";
@@ -3133,29 +1984,29 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@HORARIO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORARIO_ATENDIMENTO";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DATA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATA_ATENDIMENTO";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@HORACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORACONSULTA_ATENDIMENTO";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DATACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATACONSULTA_ATENDIMENTO";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -3237,11 +2088,25 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@STATUS_ATENDIMENTO";
+            param.ParameterName = "@TB_EMPENHO_idEMPENHO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
+            param.SourceColumn = "TB_EMPENHO_idEMPENHO";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@STATUS_ATENDIMENTO";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
             param.SourceColumn = "STATUS_ATENDIMENTO";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@TELEFONEPACIENTE";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TELEFONEPACIENTE";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@SOLICITANTE_ATENDIMENTO";
@@ -3249,13 +2114,6 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "SOLICITANTE_ATENDIMENTO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_idATENDIMENTO";
@@ -3276,8 +2134,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_HORARIO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORARIO_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -3293,8 +2151,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DATA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -3310,8 +2168,8 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_HORACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Time;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Time;
             param.IsNullable = true;
             param.SourceColumn = "HORACONSULTA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -3327,20 +2185,11 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DATACONSULTA_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "DATACONSULTA_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_ESTABELECIMENTOorigem_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOorigem_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ESTABELECIMENTOorigem_ATENDIMENTO";
@@ -3351,15 +2200,6 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_ESTABELECIMENTOdestino_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOdestino_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ESTABELECIMENTOdestino_ATENDIMENTO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -3368,30 +2208,12 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_PACIENTEorigem_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEorigem_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PACIENTEorigem_ATENDIMENTO";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PACIENTEorigem_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_PACIENTEdestino_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEdestino_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PACIENTEdestino_ATENDIMENTO";
@@ -3504,20 +2326,19 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TB_EMPENHO_idEMPENHO";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "TB_EMPENHO_idEMPENHO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -3531,10 +2352,27 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_STATUS_ATENDIMENTO";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "STATUS_ATENDIMENTO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_TELEFONEPACIENTE";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "STATUS_ATENDIMENTO";
+            param.SourceColumn = "TELEFONEPACIENTE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TELEFONEPACIENTE";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TELEFONEPACIENTE";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -3554,222 +2392,28 @@ namespace TRANSPORTESANITARIO.BancoDados.AtendimentoDataSetTableAdapters {
             param.SourceColumn = "SOLICITANTE_ATENDIMENTO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_OBSERVACAO_ATENDIMENTO";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::TRANSPORTESANITARIO.Properties.Settings.Default.transportesanitariobdConnectionString1;
+            this._connection.ConnectionString = global::TRANSPORTESANITARIO.Properties.Settings.Default.transportesanitariobdConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[5];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT `idATENDIMENTO`, `HORARIO_ATENDIMENTO`, `DATA_ATENDIMENTO`, `HORACONSULTA_ATENDIMENTO`, `DATACONSULTA_ATENDIMENTO`, `ESTABELECIMENTOorigem_ATENDIMENTO`, `ESTABELECIMENTOdestino_ATENDIMENTO`, `PACIENTEorigem_ATENDIMENTO`, `PACIENTEdestino_ATENDIMENTO`, `PADISTOLICA_ATENDIMENTO`, `PASISTOLICA_ATENDIMENTO`, `FREQUENCIACARDIACA_ATENDIMENTO`, `FREQUENCIARESPIRATORIA_ATENDIMENTO`, `TEMPERATURA_ATENDIMENTO`, `SATURACAO_ATENDIMENTO`, `TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL`, `STATUS_ATENDIMENTO`, `SOLICITANTE_ATENDIMENTO`, `OBSERVACAO_ATENDIMENTO` FROM `tb_atendimento`";
+            this._commandCollection[0].CommandText = @"SELECT `idATENDIMENTO`, `HORARIO_ATENDIMENTO`, `DATA_ATENDIMENTO`, `HORACONSULTA_ATENDIMENTO`, `DATACONSULTA_ATENDIMENTO`, `ESTABELECIMENTOorigem_ATENDIMENTO`, `ESTABELECIMENTOdestino_ATENDIMENTO`, `PACIENTEorigem_ATENDIMENTO`, `PACIENTEdestino_ATENDIMENTO`, `PADISTOLICA_ATENDIMENTO`, `PASISTOLICA_ATENDIMENTO`, `FREQUENCIACARDIACA_ATENDIMENTO`, `FREQUENCIARESPIRATORIA_ATENDIMENTO`, `TEMPERATURA_ATENDIMENTO`, `SATURACAO_ATENDIMENTO`, `TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL`, `TB_EMPENHO_idEMPENHO`, `STATUS_ATENDIMENTO`, `TELEFONEPACIENTE`, `SOLICITANTE_ATENDIMENTO` FROM `tb_atendimento`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE       tb_atendimento
-SET                HORARIO_ATENDIMENTO = @horarioAtendimento, DATA_ATENDIMENTO = @dataAtendimento, HORACONSULTA_ATENDIMENTO = @horaConsulta, 
-                         DATACONSULTA_ATENDIMENTO = @dataConsulta, ESTABELECIMENTOorigem_ATENDIMENTO = @estabelecimentoOrigem, 
-                         ESTABELECIMENTOdestino_ATENDIMENTO = @EstabelecimentoDestino, PACIENTEorigem_ATENDIMENTO = @pacienteOrigem, 
-                         PACIENTEdestino_ATENDIMENTO = @pacienteDestino, PADISTOLICA_ATENDIMENTO = @paDiastolica, PASISTOLICA_ATENDIMENTO = @paSistolica, 
-                         FREQUENCIACARDIACA_ATENDIMENTO = @frequenciaCArdiaca, FREQUENCIARESPIRATORIA_ATENDIMENTO = @frequenciaRespiratoria, 
-                         TEMPERATURA_ATENDIMENTO = @temperatura, SATURACAO_ATENDIMENTO = @saturacao, SOLICITANTE_ATENDIMENTO = @Solicitante, 
-                         STATUS_ATENDIMENTO = @statusAtendimento, OBSERVACAO_ATENDIMENTO = @Observacao, 
-                         TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL = @funcionarioResponsavel
-WHERE        (idATENDIMENTO = @idAtendimento)";
+            this._commandCollection[1].CommandText = "SELECT        MAX(idATENDIMENTO) AS UltimoEmpenho\r\nFROM            tb_atendimento" +
+                "";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@horarioAtendimento";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
-            param.IsNullable = true;
-            param.SourceColumn = "HORARIO_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@dataAtendimento";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
-            param.IsNullable = true;
-            param.SourceColumn = "DATA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@horaConsulta";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
-            param.IsNullable = true;
-            param.SourceColumn = "HORACONSULTA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@dataConsulta";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
-            param.IsNullable = true;
-            param.SourceColumn = "DATACONSULTA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@estabelecimentoOrigem";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOorigem_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@EstabelecimentoDestino";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ESTABELECIMENTOdestino_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pacienteOrigem";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEorigem_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pacienteDestino";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PACIENTEdestino_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@paDiastolica";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PADISTOLICA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@paSistolica";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "PASISTOLICA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@frequenciaCArdiaca";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FREQUENCIACARDIACA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@frequenciaRespiratoria";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FREQUENCIARESPIRATORIA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@temperatura";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "TEMPERATURA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@saturacao";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "SATURACAO_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Solicitante";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 45;
-            param.IsNullable = true;
-            param.SourceColumn = "SOLICITANTE_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@statusAtendimento";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "STATUS_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Observacao";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 200;
-            param.IsNullable = true;
-            param.SourceColumn = "OBSERVACAO_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@funcionarioResponsavel";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL";
-            this._commandCollection[1].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@idAtendimento";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "idATENDIMENTO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._commandCollection[1].Parameters.Add(param);
-            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        idATENDIMENTO\r\nFROM            tb_atendimento\r\nWHERE        (idATEN" +
-                "DIMENTO = @idatendimento)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@idatendimento";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "idATENDIMENTO";
-            this._commandCollection[2].Parameters.Add(param);
-            this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT        idATENDIMENTO, HORARIO_ATENDIMENTO, DATA_ATENDIMENTO, HORACONSULTA_ATENDIMENTO, DATACONSULTA_ATENDIMENTO, 
-                         ESTABELECIMENTOorigem_ATENDIMENTO, ESTABELECIMENTOdestino_ATENDIMENTO, PACIENTEorigem_ATENDIMENTO, 
-                         PACIENTEdestino_ATENDIMENTO, PADISTOLICA_ATENDIMENTO, PASISTOLICA_ATENDIMENTO, FREQUENCIACARDIACA_ATENDIMENTO, 
-                         FREQUENCIARESPIRATORIA_ATENDIMENTO, TEMPERATURA_ATENDIMENTO, SATURACAO_ATENDIMENTO, 
-                         TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, STATUS_ATENDIMENTO, SOLICITANTE_ATENDIMENTO, OBSERVACAO_ATENDIMENTO
-FROM            tb_atendimento
-WHERE        (idATENDIMENTO = @idAteneimento)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@idAteneimento";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "idATENDIMENTO";
-            this._commandCollection[3].Parameters.Add(param);
-            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        MAX(idATENDIMENTO) AS ID\r\nFROM            tb_atendimento";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3791,18 +2435,6 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual AtendimentoDataSet.tb_atendimentoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AtendimentoDataSet.tb_atendimentoDataTable dataTable = new AtendimentoDataSet.tb_atendimentoDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual AtendimentoDataSet.tb_atendimentoDataTable RetornaDadosEmpenho(int idAteneimento) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idAteneimento));
             AtendimentoDataSet.tb_atendimentoDataTable dataTable = new AtendimentoDataSet.tb_atendimentoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3847,20 +2479,21 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
                     global::System.Nullable<global::System.DateTime> Original_DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEdestino_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int Original_PACIENTEorigem_ATENDIMENTO, 
+                    int Original_PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> Original_STATUS_ATENDIMENTO, 
-                    string Original_SOLICITANTE_ATENDIMENTO, 
-                    string Original_OBSERVACAO_ATENDIMENTO) {
+                    int Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int Original_TB_EMPENHO_idEMPENHO, 
+                    string Original_STATUS_ATENDIMENTO, 
+                    string Original_TELEFONEPACIENTE, 
+                    string Original_SOLICITANTE_ATENDIMENTO) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idATENDIMENTO));
             if ((Original_HORARIO_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -3894,117 +2527,83 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_ESTABELECIMENTOorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ESTABELECIMENTOorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ESTABELECIMENTOdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_ESTABELECIMENTOdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PACIENTEorigem_ATENDIMENTO.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_ESTABELECIMENTOorigem_ATENDIMENTO));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ESTABELECIMENTOdestino_ATENDIMENTO));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_PACIENTEorigem_ATENDIMENTO));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_PACIENTEdestino_ATENDIMENTO));
+            if ((Original_PADISTOLICA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_PACIENTEorigem_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_PADISTOLICA_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_PACIENTEdestino_ATENDIMENTO.HasValue == true)) {
+            if ((Original_PASISTOLICA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_PACIENTEdestino_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_PASISTOLICA_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_PADISTOLICA_ATENDIMENTO.HasValue == true)) {
+            if ((Original_FREQUENCIACARDIACA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_PADISTOLICA_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_FREQUENCIACARDIACA_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_PASISTOLICA_ATENDIMENTO.HasValue == true)) {
+            if ((Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_PASISTOLICA_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_FREQUENCIACARDIACA_ATENDIMENTO.HasValue == true)) {
+            if ((Original_TEMPERATURA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_FREQUENCIACARDIACA_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_TEMPERATURA_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.HasValue == true)) {
+            if ((Original_SATURACAO_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_SATURACAO_ATENDIMENTO.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Original_TEMPERATURA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_TEMPERATURA_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SATURACAO_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_SATURACAO_ATENDIMENTO.Value));
-            }
-            else {
+            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL));
+            this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_TB_EMPENHO_idEMPENHO));
+            if ((Original_STATUS_ATENDIMENTO == null)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_STATUS_ATENDIMENTO));
+            }
+            if ((Original_TELEFONEPACIENTE == null)) {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((Original_STATUS_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_STATUS_ATENDIMENTO.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_TELEFONEPACIENTE));
+            }
+            if ((Original_SOLICITANTE_ATENDIMENTO == null)) {
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
-            if ((Original_SOLICITANTE_ATENDIMENTO == null)) {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_SOLICITANTE_ATENDIMENTO));
-            }
-            if ((Original_OBSERVACAO_ATENDIMENTO == null)) {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_OBSERVACAO_ATENDIMENTO));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_SOLICITANTE_ATENDIMENTO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4032,20 +2631,21 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
                     global::System.Nullable<global::System.DateTime> DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEdestino_ATENDIMENTO, 
+                    int ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int PACIENTEorigem_ATENDIMENTO, 
+                    int PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> STATUS_ATENDIMENTO, 
-                    string SOLICITANTE_ATENDIMENTO, 
-                    string OBSERVACAO_ATENDIMENTO) {
+                    int TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int TB_EMPENHO_idEMPENHO, 
+                    string STATUS_ATENDIMENTO, 
+                    string TELEFONEPACIENTE, 
+                    string SOLICITANTE_ATENDIMENTO) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idATENDIMENTO));
             if ((HORARIO_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(HORARIO_ATENDIMENTO.Value));
@@ -4071,30 +2671,10 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((ESTABELECIMENTOorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ESTABELECIMENTOorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((ESTABELECIMENTOdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ESTABELECIMENTOdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((PACIENTEorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(PACIENTEorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((PACIENTEdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(PACIENTEdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ESTABELECIMENTOorigem_ATENDIMENTO));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ESTABELECIMENTOdestino_ATENDIMENTO));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(PACIENTEorigem_ATENDIMENTO));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(PACIENTEdestino_ATENDIMENTO));
             if ((PADISTOLICA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((int)(PADISTOLICA_ATENDIMENTO.Value));
             }
@@ -4131,29 +2711,25 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((STATUS_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(STATUS_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((SOLICITANTE_ATENDIMENTO == null)) {
+            this.Adapter.InsertCommand.Parameters[15].Value = ((int)(TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((int)(TB_EMPENHO_idEMPENHO));
+            if ((STATUS_ATENDIMENTO == null)) {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(SOLICITANTE_ATENDIMENTO));
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(STATUS_ATENDIMENTO));
             }
-            if ((OBSERVACAO_ATENDIMENTO == null)) {
+            if ((TELEFONEPACIENTE == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(OBSERVACAO_ATENDIMENTO));
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(TELEFONEPACIENTE));
+            }
+            if ((SOLICITANTE_ATENDIMENTO == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(SOLICITANTE_ATENDIMENTO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4181,39 +2757,41 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
                     global::System.Nullable<global::System.DateTime> DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEdestino_ATENDIMENTO, 
+                    int ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int PACIENTEorigem_ATENDIMENTO, 
+                    int PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> STATUS_ATENDIMENTO, 
+                    int TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int TB_EMPENHO_idEMPENHO, 
+                    string STATUS_ATENDIMENTO, 
+                    string TELEFONEPACIENTE, 
                     string SOLICITANTE_ATENDIMENTO, 
-                    string OBSERVACAO_ATENDIMENTO, 
                     int Original_idATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_HORARIO_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEdestino_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int Original_PACIENTEorigem_ATENDIMENTO, 
+                    int Original_PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> Original_STATUS_ATENDIMENTO, 
-                    string Original_SOLICITANTE_ATENDIMENTO, 
-                    string Original_OBSERVACAO_ATENDIMENTO) {
+                    int Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int Original_TB_EMPENHO_idEMPENHO, 
+                    string Original_STATUS_ATENDIMENTO, 
+                    string Original_TELEFONEPACIENTE, 
+                    string Original_SOLICITANTE_ATENDIMENTO) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idATENDIMENTO));
             if ((HORARIO_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(HORARIO_ATENDIMENTO.Value));
@@ -4239,30 +2817,10 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((ESTABELECIMENTOorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ESTABELECIMENTOorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((ESTABELECIMENTOdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ESTABELECIMENTOdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((PACIENTEorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(PACIENTEorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((PACIENTEdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(PACIENTEdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ESTABELECIMENTOorigem_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ESTABELECIMENTOdestino_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(PACIENTEorigem_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(PACIENTEdestino_ATENDIMENTO));
             if ((PADISTOLICA_ATENDIMENTO.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(PADISTOLICA_ATENDIMENTO.Value));
             }
@@ -4299,174 +2857,136 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((STATUS_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(STATUS_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((SOLICITANTE_ATENDIMENTO == null)) {
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(TB_EMPENHO_idEMPENHO));
+            if ((STATUS_ATENDIMENTO == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(SOLICITANTE_ATENDIMENTO));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(STATUS_ATENDIMENTO));
             }
-            if ((OBSERVACAO_ATENDIMENTO == null)) {
+            if ((TELEFONEPACIENTE == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(OBSERVACAO_ATENDIMENTO));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(TELEFONEPACIENTE));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_idATENDIMENTO));
-            if ((Original_HORARIO_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_HORARIO_ATENDIMENTO.Value));
+            if ((SOLICITANTE_ATENDIMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(SOLICITANTE_ATENDIMENTO));
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_idATENDIMENTO));
+            if ((Original_HORARIO_ATENDIMENTO.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_HORARIO_ATENDIMENTO.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_DATA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_DATA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_DATA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((Original_HORACONSULTA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_HORACONSULTA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_HORACONSULTA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_DATACONSULTA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_DATACONSULTA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_DATACONSULTA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_ESTABELECIMENTOorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_ESTABELECIMENTOorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ESTABELECIMENTOdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_ESTABELECIMENTOdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PACIENTEorigem_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_PACIENTEorigem_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PACIENTEdestino_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_PACIENTEdestino_ATENDIMENTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_ESTABELECIMENTOorigem_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ESTABELECIMENTOdestino_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_PACIENTEorigem_ATENDIMENTO));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_PACIENTEdestino_ATENDIMENTO));
             if ((Original_PADISTOLICA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_PADISTOLICA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_PADISTOLICA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             if ((Original_PASISTOLICA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_PASISTOLICA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_PASISTOLICA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_FREQUENCIACARDIACA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_FREQUENCIACARDIACA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_FREQUENCIACARDIACA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_FREQUENCIARESPIRATORIA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_TEMPERATURA_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_TEMPERATURA_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_TEMPERATURA_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             if ((Original_SATURACAO_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_SATURACAO_ATENDIMENTO.Value));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_SATURACAO_ATENDIMENTO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
-            if ((Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            if ((Original_STATUS_ATENDIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_STATUS_ATENDIMENTO.Value));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL));
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_TB_EMPENHO_idEMPENHO));
+            if ((Original_STATUS_ATENDIMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_STATUS_ATENDIMENTO));
+            }
+            if ((Original_TELEFONEPACIENTE == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_TELEFONEPACIENTE));
             }
             if ((Original_SOLICITANTE_ATENDIMENTO == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_SOLICITANTE_ATENDIMENTO));
-            }
-            if ((Original_OBSERVACAO_ATENDIMENTO == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_OBSERVACAO_ATENDIMENTO));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_SOLICITANTE_ATENDIMENTO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4493,227 +3013,49 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
                     global::System.Nullable<global::System.DateTime> DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> PACIENTEdestino_ATENDIMENTO, 
+                    int ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int PACIENTEorigem_ATENDIMENTO, 
+                    int PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> STATUS_ATENDIMENTO, 
+                    int TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int TB_EMPENHO_idEMPENHO, 
+                    string STATUS_ATENDIMENTO, 
+                    string TELEFONEPACIENTE, 
                     string SOLICITANTE_ATENDIMENTO, 
-                    string OBSERVACAO_ATENDIMENTO, 
                     int Original_idATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_HORARIO_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_HORACONSULTA_ATENDIMENTO, 
                     global::System.Nullable<global::System.DateTime> Original_DATACONSULTA_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEorigem_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_PACIENTEdestino_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOorigem_ATENDIMENTO, 
+                    int Original_ESTABELECIMENTOdestino_ATENDIMENTO, 
+                    int Original_PACIENTEorigem_ATENDIMENTO, 
+                    int Original_PACIENTEdestino_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PADISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_PASISTOLICA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIACARDIACA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_FREQUENCIARESPIRATORIA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_TEMPERATURA_ATENDIMENTO, 
                     global::System.Nullable<int> Original_SATURACAO_ATENDIMENTO, 
-                    global::System.Nullable<int> Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
-                    global::System.Nullable<int> Original_STATUS_ATENDIMENTO, 
-                    string Original_SOLICITANTE_ATENDIMENTO, 
-                    string Original_OBSERVACAO_ATENDIMENTO) {
-            return this.Update(Original_idATENDIMENTO, HORARIO_ATENDIMENTO, DATA_ATENDIMENTO, HORACONSULTA_ATENDIMENTO, DATACONSULTA_ATENDIMENTO, ESTABELECIMENTOorigem_ATENDIMENTO, ESTABELECIMENTOdestino_ATENDIMENTO, PACIENTEorigem_ATENDIMENTO, PACIENTEdestino_ATENDIMENTO, PADISTOLICA_ATENDIMENTO, PASISTOLICA_ATENDIMENTO, FREQUENCIACARDIACA_ATENDIMENTO, FREQUENCIARESPIRATORIA_ATENDIMENTO, TEMPERATURA_ATENDIMENTO, SATURACAO_ATENDIMENTO, TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, STATUS_ATENDIMENTO, SOLICITANTE_ATENDIMENTO, OBSERVACAO_ATENDIMENTO, Original_idATENDIMENTO, Original_HORARIO_ATENDIMENTO, Original_DATA_ATENDIMENTO, Original_HORACONSULTA_ATENDIMENTO, Original_DATACONSULTA_ATENDIMENTO, Original_ESTABELECIMENTOorigem_ATENDIMENTO, Original_ESTABELECIMENTOdestino_ATENDIMENTO, Original_PACIENTEorigem_ATENDIMENTO, Original_PACIENTEdestino_ATENDIMENTO, Original_PADISTOLICA_ATENDIMENTO, Original_PASISTOLICA_ATENDIMENTO, Original_FREQUENCIACARDIACA_ATENDIMENTO, Original_FREQUENCIARESPIRATORIA_ATENDIMENTO, Original_TEMPERATURA_ATENDIMENTO, Original_SATURACAO_ATENDIMENTO, Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, Original_STATUS_ATENDIMENTO, Original_SOLICITANTE_ATENDIMENTO, Original_OBSERVACAO_ATENDIMENTO);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int AtualizaAtendimento(
-                    global::System.Nullable<global::System.DateTime> horarioAtendimento, 
-                    global::System.Nullable<global::System.DateTime> dataAtendimento, 
-                    global::System.Nullable<global::System.DateTime> horaConsulta, 
-                    global::System.Nullable<global::System.DateTime> dataConsulta, 
-                    global::System.Nullable<int> estabelecimentoOrigem, 
-                    global::System.Nullable<int> EstabelecimentoDestino, 
-                    global::System.Nullable<int> pacienteOrigem, 
-                    global::System.Nullable<int> pacienteDestino, 
-                    global::System.Nullable<int> paDiastolica, 
-                    global::System.Nullable<int> paSistolica, 
-                    global::System.Nullable<int> frequenciaCArdiaca, 
-                    global::System.Nullable<int> frequenciaRespiratoria, 
-                    global::System.Nullable<int> temperatura, 
-                    global::System.Nullable<int> saturacao, 
-                    string Solicitante, 
-                    global::System.Nullable<int> statusAtendimento, 
-                    string Observacao, 
-                    global::System.Nullable<int> funcionarioResponsavel, 
-                    int idAtendimento) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[1];
-            if ((horarioAtendimento.HasValue == true)) {
-                command.Parameters[0].Value = ((System.DateTime)(horarioAtendimento.Value));
-            }
-            else {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((dataAtendimento.HasValue == true)) {
-                command.Parameters[1].Value = ((System.DateTime)(dataAtendimento.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((horaConsulta.HasValue == true)) {
-                command.Parameters[2].Value = ((System.DateTime)(horaConsulta.Value));
-            }
-            else {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((dataConsulta.HasValue == true)) {
-                command.Parameters[3].Value = ((System.DateTime)(dataConsulta.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((estabelecimentoOrigem.HasValue == true)) {
-                command.Parameters[4].Value = ((int)(estabelecimentoOrigem.Value));
-            }
-            else {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((EstabelecimentoDestino.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(EstabelecimentoDestino.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((pacienteOrigem.HasValue == true)) {
-                command.Parameters[6].Value = ((int)(pacienteOrigem.Value));
-            }
-            else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((pacienteDestino.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(pacienteDestino.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((paDiastolica.HasValue == true)) {
-                command.Parameters[8].Value = ((int)(paDiastolica.Value));
-            }
-            else {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((paSistolica.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(paSistolica.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((frequenciaCArdiaca.HasValue == true)) {
-                command.Parameters[10].Value = ((int)(frequenciaCArdiaca.Value));
-            }
-            else {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((frequenciaRespiratoria.HasValue == true)) {
-                command.Parameters[11].Value = ((int)(frequenciaRespiratoria.Value));
-            }
-            else {
-                command.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((temperatura.HasValue == true)) {
-                command.Parameters[12].Value = ((int)(temperatura.Value));
-            }
-            else {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((saturacao.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(saturacao.Value));
-            }
-            else {
-                command.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Solicitante == null)) {
-                command.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[14].Value = ((string)(Solicitante));
-            }
-            if ((statusAtendimento.HasValue == true)) {
-                command.Parameters[15].Value = ((int)(statusAtendimento.Value));
-            }
-            else {
-                command.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Observacao == null)) {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[16].Value = ((string)(Observacao));
-            }
-            if ((funcionarioResponsavel.HasValue == true)) {
-                command.Parameters[17].Value = ((int)(funcionarioResponsavel.Value));
-            }
-            else {
-                command.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            command.Parameters[18].Value = ((int)(idAtendimento));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> PesquisaAtendimentoExistente(int idatendimento) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(idatendimento));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
+                    int Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, 
+                    int Original_TB_EMPENHO_idEMPENHO, 
+                    string Original_STATUS_ATENDIMENTO, 
+                    string Original_TELEFONEPACIENTE, 
+                    string Original_SOLICITANTE_ATENDIMENTO) {
+            return this.Update(Original_idATENDIMENTO, HORARIO_ATENDIMENTO, DATA_ATENDIMENTO, HORACONSULTA_ATENDIMENTO, DATACONSULTA_ATENDIMENTO, ESTABELECIMENTOorigem_ATENDIMENTO, ESTABELECIMENTOdestino_ATENDIMENTO, PACIENTEorigem_ATENDIMENTO, PACIENTEdestino_ATENDIMENTO, PADISTOLICA_ATENDIMENTO, PASISTOLICA_ATENDIMENTO, FREQUENCIACARDIACA_ATENDIMENTO, FREQUENCIARESPIRATORIA_ATENDIMENTO, TEMPERATURA_ATENDIMENTO, SATURACAO_ATENDIMENTO, TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, TB_EMPENHO_idEMPENHO, STATUS_ATENDIMENTO, TELEFONEPACIENTE, SOLICITANTE_ATENDIMENTO, Original_idATENDIMENTO, Original_HORARIO_ATENDIMENTO, Original_DATA_ATENDIMENTO, Original_HORACONSULTA_ATENDIMENTO, Original_DATACONSULTA_ATENDIMENTO, Original_ESTABELECIMENTOorigem_ATENDIMENTO, Original_ESTABELECIMENTOdestino_ATENDIMENTO, Original_PACIENTEorigem_ATENDIMENTO, Original_PACIENTEdestino_ATENDIMENTO, Original_PADISTOLICA_ATENDIMENTO, Original_PASISTOLICA_ATENDIMENTO, Original_FREQUENCIACARDIACA_ATENDIMENTO, Original_FREQUENCIARESPIRATORIA_ATENDIMENTO, Original_TEMPERATURA_ATENDIMENTO, Original_SATURACAO_ATENDIMENTO, Original_TB_FUNCIONARIO_MATRICULA_FUNCIONARIORESPONSAVEL, Original_TB_EMPENHO_idEMPENHO, Original_STATUS_ATENDIMENTO, Original_TELEFONEPACIENTE, Original_SOLICITANTE_ATENDIMENTO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> RetornaUltimoEmpenho() {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[4];
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[1];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4735,269 +3077,6 @@ WHERE        (idATENDIMENTO = @idAteneimento)";
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ViewEmpenhosDiaTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
-        
-        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
-        
-        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
-        
-        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ViewEmpenhosDiaTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ViewEmpenhosDia";
-            tableMapping.ColumnMappings.Add("DATA", "DATA");
-            tableMapping.ColumnMappings.Add("HORA", "HORA");
-            tableMapping.ColumnMappings.Add("idOrigem", "idOrigem");
-            tableMapping.ColumnMappings.Add("NomeEstabelecimentoOrigem", "NomeEstabelecimentoOrigem");
-            tableMapping.ColumnMappings.Add("idDestino", "idDestino");
-            tableMapping.ColumnMappings.Add("NomeEstabelecimentoDestino", "NomeEstabelecimentoDestino");
-            tableMapping.ColumnMappings.Add("idPacienteOrigem", "idPacienteOrigem");
-            tableMapping.ColumnMappings.Add("NomePacienteOrigem", "NomePacienteOrigem");
-            tableMapping.ColumnMappings.Add("idPacienteDestino", "idPacienteDestino");
-            tableMapping.ColumnMappings.Add("NomePacienteDestino", "NomePacienteDestino");
-            tableMapping.ColumnMappings.Add("PADiastolica", "PADiastolica");
-            tableMapping.ColumnMappings.Add("PASistolica", "PASistolica");
-            tableMapping.ColumnMappings.Add("FrequenciaCardiaca", "FrequenciaCardiaca");
-            tableMapping.ColumnMappings.Add("FrequenciaRespiratoria", "FrequenciaRespiratoria");
-            tableMapping.ColumnMappings.Add("Temperatura", "Temperatura");
-            tableMapping.ColumnMappings.Add("Saturacao", "Saturacao");
-            tableMapping.ColumnMappings.Add("StatusAtendimento", "StatusAtendimento");
-            tableMapping.ColumnMappings.Add("Observacao", "Observacao");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::TRANSPORTESANITARIO.Properties.Settings.Default.transportesanitariobdConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
-            this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tb_atendimento.DATACONSULTA_ATENDIMENTO AS DATA, tb_atendimento.HOR" +
-                "ACONSULTA_ATENDIMENTO AS HORA, \r\n                         tb_estabelicimento_sau" +
-                "de_1.idESTABELICIMENTO_SAUDE AS idOrigem, \r\n                         tb_estabeli" +
-                "cimento_saude_1.NOME_ESTABELECIMENTO AS NomeEstabelecimentoOrigem, \r\n           " +
-                "              tb_estabelicimento_saude.idESTABELICIMENTO_SAUDE AS idDestino, \r\n " +
-                "                        tb_estabelicimento_saude.NOME_ESTABELECIMENTO AS NomeEst" +
-                "abelecimentoDestino, tb_paciente_1.idPACIENTE AS idPacienteOrigem, \r\n           " +
-                "              tb_paciente_1.NOME_PACIENTE AS NomePacienteOrigem, tb_paciente.idP" +
-                "ACIENTE AS idPacienteDestino, \r\n                         tb_paciente.NOME_PACIEN" +
-                "TE AS NomePacienteDestino, tb_atendimento.PADISTOLICA_ATENDIMENTO AS PADiastolic" +
-                "a, \r\n                         tb_atendimento.PASISTOLICA_ATENDIMENTO AS PASistol" +
-                "ica, tb_atendimento.FREQUENCIACARDIACA_ATENDIMENTO AS FrequenciaCardiaca, \r\n    " +
-                "                     tb_atendimento.FREQUENCIARESPIRATORIA_ATENDIMENTO AS Freque" +
-                "nciaRespiratoria, tb_atendimento.TEMPERATURA_ATENDIMENTO AS Temperatura, \r\n     " +
-                "                    tb_atendimento.SATURACAO_ATENDIMENTO AS Saturacao, tb_atendi" +
-                "mento.STATUS_ATENDIMENTO AS StatusAtendimento, \r\n                         tb_ate" +
-                "ndimento.OBSERVACAO_ATENDIMENTO AS Observacao\r\nFROM            tb_atendimento IN" +
-                "NER JOIN\r\n                         tb_estabelicimento_saude tb_estabelicimento_s" +
-                "aude_1 ON \r\n                         tb_atendimento.ESTABELECIMENTOdestino_ATEND" +
-                "IMENTO = tb_estabelicimento_saude_1.idESTABELICIMENTO_SAUDE INNER JOIN\r\n        " +
-                "                 tb_estabelicimento_saude ON \r\n                         tb_atend" +
-                "imento.ESTABELECIMENTOorigem_ATENDIMENTO = tb_estabelicimento_saude.idESTABELICI" +
-                "MENTO_SAUDE INNER JOIN\r\n                         tb_paciente ON tb_atendimento.P" +
-                "ACIENTEdestino_ATENDIMENTO = tb_paciente.idPACIENTE INNER JOIN\r\n                " +
-                "         tb_paciente tb_paciente_1 ON tb_atendimento.PACIENTEorigem_ATENDIMENTO " +
-                "= tb_paciente_1.idPACIENTE";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        tb_atendimento.DATACONSULTA_ATENDIMENTO AS DATA, tb_atendimento.HOR" +
-                "ACONSULTA_ATENDIMENTO AS HORA, \r\n                         tb_estabelicimento_sau" +
-                "de_1.idESTABELICIMENTO_SAUDE AS idOrigem, \r\n                         tb_estabeli" +
-                "cimento_saude_1.NOME_ESTABELECIMENTO AS NomeEstabelecimentoOrigem, \r\n           " +
-                "              tb_estabelicimento_saude.idESTABELICIMENTO_SAUDE AS idDestino, \r\n " +
-                "                        tb_estabelicimento_saude.NOME_ESTABELECIMENTO AS NomeEst" +
-                "abelecimentoDestino, tb_paciente_1.idPACIENTE AS idPacienteOrigem, \r\n           " +
-                "              tb_paciente_1.NOME_PACIENTE AS NomePacienteOrigem, tb_paciente.idP" +
-                "ACIENTE AS idPacienteDestino, \r\n                         tb_paciente.NOME_PACIEN" +
-                "TE AS NomePacienteDestino, tb_atendimento.PADISTOLICA_ATENDIMENTO AS PADiastolic" +
-                "a, \r\n                         tb_atendimento.PASISTOLICA_ATENDIMENTO AS PASistol" +
-                "ica, tb_atendimento.FREQUENCIACARDIACA_ATENDIMENTO AS FrequenciaCardiaca, \r\n    " +
-                "                     tb_atendimento.FREQUENCIARESPIRATORIA_ATENDIMENTO AS Freque" +
-                "nciaRespiratoria, tb_atendimento.TEMPERATURA_ATENDIMENTO AS Temperatura, \r\n     " +
-                "                    tb_atendimento.SATURACAO_ATENDIMENTO AS Saturacao, tb_atendi" +
-                "mento.STATUS_ATENDIMENTO AS StatusAtendimento, \r\n                         tb_ate" +
-                "ndimento.OBSERVACAO_ATENDIMENTO AS Observacao\r\nFROM            tb_atendimento IN" +
-                "NER JOIN\r\n                         tb_estabelicimento_saude tb_estabelicimento_s" +
-                "aude_1 ON \r\n                         tb_atendimento.ESTABELECIMENTOdestino_ATEND" +
-                "IMENTO = tb_estabelicimento_saude_1.idESTABELICIMENTO_SAUDE INNER JOIN\r\n        " +
-                "                 tb_estabelicimento_saude ON \r\n                         tb_atend" +
-                "imento.ESTABELECIMENTOorigem_ATENDIMENTO = tb_estabelicimento_saude.idESTABELICI" +
-                "MENTO_SAUDE INNER JOIN\r\n                         tb_paciente ON tb_atendimento.P" +
-                "ACIENTEdestino_ATENDIMENTO = tb_paciente.idPACIENTE INNER JOIN\r\n                " +
-                "         tb_paciente tb_paciente_1 ON tb_atendimento.PACIENTEorigem_ATENDIMENTO " +
-                "= tb_paciente_1.idPACIENTE\r\nWHERE        (tb_atendimento.DATA_ATENDIMENTO = @dat" +
-                "a)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@data";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
-            param.IsNullable = true;
-            param.SourceColumn = "DATA_ATENDIMENTO";
-            this._commandCollection[1].Parameters.Add(param);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AtendimentoDataSet.ViewEmpenhosDiaDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AtendimentoDataSet.ViewEmpenhosDiaDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            AtendimentoDataSet.ViewEmpenhosDiaDataTable dataTable = new AtendimentoDataSet.ViewEmpenhosDiaDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual AtendimentoDataSet.ViewEmpenhosDiaDataTable RetornaEmpenhosPorData(global::System.Nullable<global::System.DateTime> data) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((data.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(data.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            AtendimentoDataSet.ViewEmpenhosDiaDataTable dataTable = new AtendimentoDataSet.ViewEmpenhosDiaDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
     }
     

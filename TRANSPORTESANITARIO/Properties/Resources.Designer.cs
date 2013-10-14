@@ -63,29 +63,9 @@ namespace TRANSPORTESANITARIO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1356042729_11 {
-            get {
-                object obj = ResourceManager.GetObject("1356042729_11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap brasaobetim {
             get {
                 object obj = ResourceManager.GetObject("brasaobetim", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap confirmar {
-            get {
-                object obj = ResourceManager.GetObject("confirmar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

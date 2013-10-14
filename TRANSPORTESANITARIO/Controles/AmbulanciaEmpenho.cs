@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +11,6 @@ namespace TRANSPORTESANITARIO.Controles
         public string Data { get; set; }
         public string HoraIncio { get; set; }
         public string HoraFim { get; set; }
-        public string Plantao { get; set; }
         public Funcionario Motorista { get; set; }
         public Funcionario Enfermagem { get; set; }
         public int KMInicial { get; set; }

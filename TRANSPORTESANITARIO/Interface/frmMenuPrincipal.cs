@@ -14,12 +14,5 @@ namespace TRANSPORTESANITARIO.Interface
         {
             InitializeComponent();
         }
-        private void novoEmpenhoToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            frmFichadeAtendimento atende = new frmFichadeAtendimento(5995);
-            atende.MdiParent = this;
-            atende.Show();
-
-        }
     }
 }

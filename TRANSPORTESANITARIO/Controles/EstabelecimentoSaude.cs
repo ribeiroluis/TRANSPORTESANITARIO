@@ -4,7 +4,6 @@ using System.Text;
 using TRANSPORTESANITARIO.BancoDados;
 using TRANSPORTESANITARIO.BancoDados.DataSetEstabelecimentoSaudeTableAdapters;
 using System.Data;
-using System.Windows.Forms;
 
 namespace TRANSPORTESANITARIO.Controles
 {
@@ -28,20 +27,6 @@ namespace TRANSPORTESANITARIO.Controles
 
         }
 
-        public DataTable RetornaLogradouros()
-        {
-            try
-            {
-                tb_cepTableAdapter bdEnderecos = new tb_cepTableAdapter();
-                return bdEnderecos.GetData();
-
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
         public DataTable RetornaEstabelecimentosCadastrados()
         {
             DataTable tb = new DataTable();
@@ -53,7 +38,7 @@ namespace TRANSPORTESANITARIO.Controles
             catch (Exception err)
             {
                 return tb;
-                MessageBox.Show(err.Message);
+                System.Windows.Forms.MessageBox.Show(err.Message);
             }
         }
 
@@ -73,9 +58,10 @@ namespace TRANSPORTESANITARIO.Controles
                 return i;
 
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                return i;                
+                return i;
+                System.Windows.Forms.MessageBox.Show(err.Message);
             }
             
             
@@ -96,70 +82,6 @@ namespace TRANSPORTESANITARIO.Controles
 
                 System.Windows.Forms.MessageBox.Show(err.Message);
                 return 0;
-            }
-        }
-
-        public bool ValidaLogradouro()
-        {
-            try
-            {
-                tb_cepTableAdapter bdLogradouros = new tb_cepTableAdapter();
-                var cep = bdLogradouros.RetornaCepPorLogradouro(Cep.Logradouro);
-                if (cep != null)
-                {
-                    Cep._CEP = (int)cep;
-                    return true;
-                }
-                else
-                    return false;
-            }
-            catch (Exception)
-            {
-                return false;
-                throw;
-            }
-        }
-
-        public void RetornaEstabelecimento()
-        {
-            try
-            {                
-                DataRow Linha = bdEstabelecimento.RetornaEstabelecimentoPorNome(NomeEstabelecimento)[0];
-                IdEstabelecimentoSaude = (int)Linha["idESTABELICIMENTO_SAUDE"];
-                NomeEstabelecimento = Linha["NOME_ESTABELECIMENTO"].ToString();
-                Cep._CEP = (int)Linha["TB_CEP_CEP"];
-                Cep.RetornaLogradouro();                
-                Numero = (int)Linha["NUMERO_ESTABELECIMENTO"];
-                Complemento = Linha["COMPLEMENTO_ESTABELECIMENTO"].ToString();
-                PontoReferencia = Linha["PONTOREFERENCIA_ESTABELECIMENTO"].ToString();
-                Telefone1 = Linha["TELEFONE1_ESTABELECIMENTO"].ToString();
-                Telefone2 = Linha["TELEFONE2_ESTABELECIMENTO"].ToString();
-            }
-            catch (Exception)
-            {
-                
-                throw;
-            }
-        }
-
-        public void RetornaEstabelecimentoPorID()
-        {
-            try
-            {
-                DataRow Linha = bdEstabelecimento.RetornaEstabelecimentoPorIDComepleto(IdEstabelecimentoSaude)[0];
-                NomeEstabelecimento = Linha["NOME_ESTABELECIMENTO"].ToString();
-                Cep._CEP = (int)Linha["TB_CEP_CEP"];
-                Cep.RetornaLogradouro();
-                Numero = (int)Linha["NUMERO_ESTABELECIMENTO"];
-                Complemento = Linha["COMPLEMENTO_ESTABELECIMENTO"].ToString();
-                PontoReferencia = Linha["PONTOREFERENCIA_ESTABELECIMENTO"].ToString();
-                Telefone1 = Linha["TELEFONE1_ESTABELECIMENTO"].ToString();
-                Telefone2 = Linha["TELEFONE2_ESTABELECIMENTO"].ToString();
-            }
-            catch (Exception)
-            {
-
-                throw;
             }
         }
 
